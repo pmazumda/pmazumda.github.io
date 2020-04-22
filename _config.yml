@@ -26,7 +26,7 @@ navbar-links:
 #    - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
 #    - Learn markdown: "http://www.markdowntutorial.com/"
   ABOUT:
-    - ME: "aboutmyself"
+    - ME: "aboutme"
     - THIS SITE: "aboutblog"
        
 # Image to show in the navigation bar - image must be a square (width = height)
@@ -75,17 +75,16 @@ social-network-links:
   facebook: peenakm
   linkedin: pinakmazumdar
 #  reddit: yourname
-#  linkedin: daattali
 #  xing: yourname
 #  stackoverflow: "3943160/daattali"
-#  snapchat: deanat78
-#  instagram: deanat78
-#  youtube: user/deanat78
+#  snapchat: 
+#  instagram:
+#  youtube: user/
 #  spotify: yourname
-#  telephone: +14159998888
-#  steam: deanat78
-#  twitch: yourname
-#  yelp: yourname
+#  telephone:
+#  steam:
+#  twitch: 
+#  yelp:
 
 # Select which share links to show in posts
 share-links-active:
@@ -169,7 +168,7 @@ timezone: "Asia/Kolkata"
 markdown: kramdown
 highlighter: rouge
 permalink: /:year-:month-:day-:title/
-paginate: 5
+paginate: 3
 paginate_path: "/blog/page:num/"
 kramdown:
   input: GFM
