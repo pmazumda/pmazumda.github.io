@@ -5,7 +5,7 @@ title: About Me
 subtitle: A few words about me... 
 ---
 
-![Pinak Mazumdar](/img/myphoto.png)
+![Pinak Mazumdar](/img/myphoto.jpg)
 
 
 
