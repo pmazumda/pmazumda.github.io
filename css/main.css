@@ -98,6 +98,16 @@ img {
   }
 }
 
+.fb-comments {
+  margin-top: 30px;
+}
+
+@media only screen and (min-width: 768px) {
+  .fb-comments {
+    margin-top: 40px;
+  }
+}
+
 .linked-section {
   padding-top: 60px;
   margin-top: -25px;

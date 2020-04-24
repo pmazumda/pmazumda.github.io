@@ -64,7 +64,11 @@ layout: base
         </li>
         {% endif %}
       </ul>
-	  {% include comments.html %}
-    </div>
+	    {% if page.comments %}
+        <div class="fb-comments">
+          {% include fb-comment.html %}
+        </div>
+		{% endif %}
+	  </div>
   </div>
 </div>
