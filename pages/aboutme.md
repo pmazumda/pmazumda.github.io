@@ -2,7 +2,6 @@
 layout: page
 permalink: "aboutme"
 title: About Me
-bigimg: "/img/headernfooter.jpg"
 subtitle: A few words about me... 
 ---
 
