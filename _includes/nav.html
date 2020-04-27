@@ -32,6 +32,15 @@
           <li><a href="{{ link[1] | relative_url }}">{{ link[0] }}</a></li>
         {%- endif -%}
       {%- endfor -%}
+
+
+{% if site.nav-search %}
+        <li>
+          <a href="{{ '' }}/{{ site.nav-search }}" class="nav-search-link" title="Search">
+              <span class="mdi mdi-text-search nav-search-icon"></span>
+            </a>
+        </li>
+        {% endif %}
       </ul>
     </div>
 
