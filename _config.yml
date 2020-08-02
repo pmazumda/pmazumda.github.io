@@ -19,18 +19,12 @@ description: A blog all about middleware tips and tricks.
 
 # List of links in the navigation bar
 navbar-links:
-
-  BLOG:
-   - POSTS: "blog" 
-   - TAGS: "tags" 
-#  Resources:
-#    - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
-#    - Learn markdown: "http://www.markdowntutorial.com/"
-  ABOUT:
+ BLOG:
+   - POSTS: "blog"
+   - TAGS: "tags"
+ ABOUT:
    - ME: "aboutme"
-   - THIS SITE: "aboutblog"
-
-
+   - THIS SITE: "aboutheblog"
 
 # --- Google custom search config --- #
 nav-search: "search"
@@ -70,7 +64,7 @@ footer-img: "/img/headernfooter.jpg"
 # Important: you must keep the "name" parameter, everything else you can remove
 author:
   name: Pinak Mazumdar
-  
+
 # Select your active Social Network Links.
 # Uncomment the links you want to show in the footer and add your information to each link.
 # You can reorder the items to define the link order.
@@ -83,13 +77,13 @@ social-network-links:
 #  reddit: yourname
 #  xing: yourname
 #  stackoverflow: "3943160/daattali"
-#  snapchat: 
+#  snapchat:
 #  instagram:
 #  youtube: user/
 #  spotify: yourname
 #  telephone:
 #  steam:
-#  twitch: 
+#  twitch:
 #  yelp:
 
 # Select which share links to show in posts
