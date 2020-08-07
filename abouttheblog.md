@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: "abouttheblog"
+permalink: "/pages/abouttheblog"
 title: About this Blog
 bigimg: '/img/headernfooter.jpg' : "Background photo created by [freepik](https://www.freepik.com/free-photos-vectors/background)"
 subtitle: A few words about me and  why I am here...
