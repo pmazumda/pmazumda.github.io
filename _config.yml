@@ -24,7 +24,7 @@ navbar-links:
    - TAGS: "tags"
  ABOUT:
    - ME: "aboutme"
-   - THIS SITE: "abouttheblog"
+   - THIS SITE: "/pages/abouttheblog"
 
 # --- Google custom search config --- #
 nav-search: "search"
