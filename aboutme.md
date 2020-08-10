@@ -3,9 +3,9 @@ layout: page
 permalink: "aboutme"
 title: About me
 bigimg:
-  - "/img/bgimage/cars/muscle1.JPG" : "My love for cars"
-  - "/img/bgimage/cars/muscle2.JPG" : "My love for cars"
-  - "/img/bgimage/cars/muscle3.JPG" : "My love for cars"
+  - "/img/bgimg/cars/muscle1.jpg" : "My love for cars"
+  - "/img/bgimg/cars/muscle2.jpg" : "My love for cars"
+  - "/img/bgimg/cars/muscle3.jpg" : "My love for cars"
 subtitle: Why you'd want to go on a date with me
 ---
 
