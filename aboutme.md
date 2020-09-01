@@ -16,9 +16,9 @@ bigimg:
 subtitle: A little more about me!!
 ---
 
-<i class="mdi mdi-account"></i> My name is Pinak Mazumdar and I live in <i class="mdi mdi-earth"></i> [Bangalore/Bengaluru](https://goo.gl/maps/qsJRuHBYRJ5xRXqZ6){:target="_blank"},India. The Centre of India's high-tech industry and widely regarded as the "Silicon Valley" of India. Some of the major IT giants  have their headquarters housed here. 
+<i class="mdi mdi-account"></i> My name is Pinak Mazumdar and I live in <i class="mdi mdi-earth"></i> [Bangalore/Bengaluru](https://goo.gl/maps/qsJRuHBYRJ5xRXqZ6){:target="_blank"},India. The Centre of India's high-tech industry and widely regarded as the **"Silicon Valley"** of India. Some of the major IT giants  have their headquarters housed here. 
 
-Apart from the tech side, the city also has a lot of historical importance which dates back to  around 890 AD. There are a lot of important and magnificent tourist destinations as well around the city. I came here in the year 2007 and since then living here. At present I am working as a Senior IT consultant for a leading  IT company. Apart from an IT engineer , my interests involve travelling(<i class="mdi mdi-beach"></i>), photography(<i class="mdi mdi-camera"></i>), cooking(<i class="mdi mdi-food-fork-drink"></i>). My love for travel, food and work have taken me to different places around the world.  
+Apart from the tech side, the city also has a lot of historical importance which dates back to  around 890 AD. There are a lot of important and magnificent tourist destinations as well around the city. I came here in the year 2007 and since then living here. At present I am working as a Senior IT consultant for a leading  IT company. Apart from an IT engineer , my interests involve travelling(<i class="mdi mdi-beach"></i>), photography(<i class="mdi mdi-camera"></i>),working with Arduino (<i class="mdi mdi-robot"></i>), cooking(<i class="mdi mdi-food-fork-drink"></i>). My love for travel, food and work have taken me to different places around the world.  
 
 ## <i class="mdi mdi-school"> Education  </i>
 
@@ -28,11 +28,9 @@ Over the years I have  worked on multiple  projects accross different domains( B
 
 ## <i class="mdi mdi-briefcase"> Work </i> 
 
-### <i class="mdi mdi-calendar-month"> Experience </i> 2016-Present
+### <i class="mdi mdi-calendar-month"> </i> 2016-Present
 
-Working as a Senior Consultant for product infrastructure planning, devising highly-available system topologies and architectures, devising advisories, best practice documentation, writing technical documentations.
-
-An individual contributor for developing solutions for extending cloud native projects.
+Working as a Senior Consultant for product infrastructure planning, devising highly-available system topologies and architectures, devising advisories,writing technical documentations and an individual contributor for developing solutions for extending cloud native projects.
     
 
 ### <i class="mdi mdi-calendar-month"></i> 2015-2016 
@@ -48,5 +46,9 @@ Worked as Oracle Fusion Middleware Engineer and responsible for building and dep
 
 Worked as Middleware and Build Engineer for a credit card acquisition platform while developing new age services and interfaces to integrate with TPA.
 
-
 You can also view my somewhat outdated [resume](/Resume.pdf),but I am sure you would like to know more about all the interesting work I have done till now which is why you can email me, find me on LinkedIn or send me a friend request on FaceBook, I would love to talk  to you ,if you want to get in touch or if you have any idea and would like to collaborate with me.
+
+## <i class="mdi mdi-contacts"> </i> Contact Me
+
+You can email(<i class="mdi mdi-gmail"></i>) me, find me on linkedIn(<i class="mdi mdi-linkedin"></i>)or facebook (<i class="mdi mdi-facebook"></i>), I would love to collaborate and speak to you.
+   
