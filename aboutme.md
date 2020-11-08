@@ -3,7 +3,7 @@ layout: page
 permalink: "aboutme"
 title: About me
 bigimg:
-  - "/img/bgimg/places/kohmatsun.jpg" : "The most peaceful beach I have seen@Thailand"
+  - "/img/bgimg/places/kohmatsun.jpg" : "A peaceful beach@Thailand"
   - "/img/bgimg/places/oman.jpg" : "The fallen star in Oman"
   - "/img/bgimg/places/oman_trek.jpg" : "The trek to the hidden treasure@Oman"
   - "/img/bgimg/places/colombo.jpg" : "Some moments of solitude@Colombo"
@@ -22,7 +22,7 @@ Apart from the tech side, the city also has a lot of historical importance which
 
 ## <i class="mdi mdi-school"> Education  </i>
 
-I graduated from Garden City College of Science and Management Studies with a Bachelor's in Computer Science. Then I pursued M.Tech in Software Systems from Birla Institute of Technology and Science (BITS).
+I graduated with a Bachelor's in Computer Science from Bangalore University in 2010.
 
 Over the years I have  worked on multiple  projects accross different domains( BFS,Insurance,Media and Telecom ) in different roles starting from middleware administration to automation. I enjoy writing reusable software tools and code for middleware infrastructure automation, devops tools etc. Below is a brief timeline of my career so far and some pieces of work and associated technologies I have worked with.
 
@@ -46,7 +46,7 @@ Worked as Oracle Fusion Middleware Engineer and responsible for building and dep
 
 Worked as Middleware and Build Engineer for a credit card acquisition platform while developing new age services and interfaces to integrate with TPA.
 
-You can also view my somewhat outdated [resume](/Resume.pdf),but I am sure you would like to know more about all the interesting work I have done till now which is why you can email me, find me on LinkedIn or send me a friend request on FaceBook, I would love to talk  to you ,if you want to get in touch or if you have any idea and would like to collaborate with me.
+You can also view my somewhat outdated [resume](/Resume.pdf),but I am sure you would like to know more about all the interesting work I have done till now which is why you can email me, find me on LinkedIn or send me a friend request on Facebook, I would love to talk  to you ,if you want to get in touch or if you have any idea and would like to collaborate with me.
 
 ## <i class="mdi mdi-contacts"> </i> Contact Me
 
