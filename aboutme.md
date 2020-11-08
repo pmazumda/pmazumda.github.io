@@ -22,7 +22,7 @@ Apart from the tech side, the city also has a lot of historical importance which
 
 ## <i class="mdi mdi-school"> Education  </i>
 
-I graduated from Garden City College of Science and Management Studies with a Bachelor's in Computer Science. Then I pursued M.Tech in Software Systems from Birla Institute of Technology and Science (BITS).
+I graduated from Garden City College of Science and Management Studies with a Bachelor's in Computer Science.
 
 Over the years I have  worked on multiple  projects accross different domains( BFS,Insurance,Media and Telecom ) in different roles starting from middleware administration to automation. I enjoy writing reusable software tools and code for middleware infrastructure automation, devops tools etc. Below is a brief timeline of my career so far and some pieces of work and associated technologies I have worked with.
 
