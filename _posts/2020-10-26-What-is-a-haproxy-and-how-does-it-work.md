@@ -19,7 +19,7 @@ HAProxy (High Availability Proxy) is a TCP/HTTP load balancer and proxy server t
 
 Its mode of operation makes its integration into existing architectures very easy and riskless, while still offering the possibility not to expose fragile web servers to the net, such as below : 
 
-![HAProxy](img/postimages/haproxy-pmode.png?raw=true "HAProxy")
+![HAProxy](/img/postimages/haproxy-pmode.png?raw=true "HAProxy")
 
 Initial Configuration
 
