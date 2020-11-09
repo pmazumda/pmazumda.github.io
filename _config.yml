@@ -31,7 +31,7 @@ nav-search: "search"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
-avatar: "/img/pinakmazumdar.jpg"
+#avatar: "/img/pinakmazumdar.jpg"
 
 # If you want to have an image logo in the top-left corner instead of the title text,
 # then specify the following parameter
@@ -166,7 +166,7 @@ timezone: "Asia/Kolkata"
 markdown: kramdown
 highlighter: rouge
 permalink: /:year-:month-:day-:title/
-paginate: 3
+paginate: 5
 paginate_path: "/blog/page:num/"
 kramdown:
   input: GFM
@@ -206,7 +206,5 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
 
-# Beautiful Jekyll / Dean Attali
-# 2fc73a3a967e97599c9763d05e564189
 
 theme: jekyll-theme-cayman
