@@ -23,95 +23,97 @@ Its mode of operation makes its integration into existing architectures very eas
 
 ### Installation and Configuration
 
+
 #### Installation
 
-The source code of HAProxy which is covered under GPL v2 licence can be downloaded from [here](http://www.haproxy.org/#down){:target="_blank"}.
+The source code of HAProxy which is covered under GPL v2 licence can be downloaded from the official [HAProxy site](http://www.haproxy.org/#down){:target="_blank"}.
+
 
 #### Configuration
 
 The primary and the default configuration file for HAProxy is /etc/haproxy/haproxy.cfg, which is created automatically during installation. This file defines a standard setup without any load balancing, following is a template for the haproxy.cfg with default configurations. The 
 
 
-global
-    log /dev/log    local0
-    log /dev/log    local1 notice
-    chroot /var/lib/haproxy
-    stats socket /run/haproxy/admin.sock mode 660 level admin
-    stats timeout 30s
-    user haproxy
-    group haproxy
-    daemon
-
-    # Default SSL material locations
-    ca-base /etc/ssl/certs
-    crt-base /etc/ssl/private
-
-    # Default ciphers to use on SSL-enabled listening sockets.
-    # For more information, see ciphers(1SSL). This list is from:
-    #  https://hynek.me/articles/hardening-your-web-servers-ssl-ciphers/
-    # An alternative list with additional directives can be obtained from
-    #  https://mozilla.github.io/server-side-tls/ssl-config-generator/?server=haproxy
-    ssl-default-bind-ciphers ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:ECDH+AES128:DH+AES:RSA+AESGCM:RSA+AES:!aNULL:!MD5:!DSS
-    ssl-default-bind-options no-sslv3
-
-defaults
-    log     global
-    mode    http
-    option  httplog
-    option  dontlognull
-    timeout connect 5000
-    timeout client  50000
-    timeout server  50000
-    errorfile 400 /etc/haproxy/errors/400.http
-    errorfile 403 /etc/haproxy/errors/403.http
-    errorfile 408 /etc/haproxy/errors/408.http
-    errorfile 500 /etc/haproxy/errors/500.http
-    errorfile 502 /etc/haproxy/errors/502.http
-    errorfile 503 /etc/haproxy/errors/503.http
-    errorfile 504 /etc/haproxy/errors/504.http
-
-frontend haproxynode
-    bind *:80
-    mode http
-    default_backend backendnodes
-
-backend backendnodes
-    balance roundrobin
-    option forwardfor
-    http-request set-header X-Forwarded-Port %[dst_port]
-    http-request add-header X-Forwarded-Proto https if { ssl_fc }
-    option httpchk HEAD / HTTP/1.1\r\nHost:localhost
-    server node1 192.168.10.3:8080 check
-    server node2 192.168.10.4:8080 check
-
-listen stats
-    bind :32700
-    stats enable
-    stats uri /
-    stats hide-version
-    stats auth someuser:password
+  global
+      log /dev/log    local0
+      log /dev/log    local1 notice
+      chroot /var/lib/haproxy
+      stats socket /run/haproxy/admin.sock mode 660 level admin
+      stats timeout 30s
+      user haproxy
+      group haproxy
+      daemon
+  
+      # Default SSL material locations
+      ca-base /etc/ssl/certs
+      crt-base /etc/ssl/private
+  
+      # Default ciphers to use on SSL-enabled listening sockets.
+      # For more information, see ciphers(1SSL). This list is from:
+      #  https://hynek.me/articles/hardening-your-web-servers-ssl-ciphers/
+      # An alternative list with additional directives can be obtained from
+      #  https://mozilla.github.io/server-side-tls/ssl-config-generator/?server=haproxy
+      ssl-default-bind-ciphers ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:ECDH+AES128:DH+AES:RSA+AESGCM:RSA+AES:!aNULL:!MD5:!DSS
+      ssl-default-bind-options no-sslv3
+  
+  defaults
+      log     global
+      mode    http
+      option  httplog
+      option  dontlognull
+      timeout connect 5000
+      timeout client  50000
+      timeout server  50000
+      errorfile 400 /etc/haproxy/errors/400.http
+      errorfile 403 /etc/haproxy/errors/403.http
+      errorfile 408 /etc/haproxy/errors/408.http
+      errorfile 500 /etc/haproxy/errors/500.http
+      errorfile 502 /etc/haproxy/errors/502.http
+      errorfile 503 /etc/haproxy/errors/503.http
+      errorfile 504 /etc/haproxy/errors/504.http
+  
+  frontend haproxynode
+      bind *:80
+      mode http
+      default_backend backendnodes
+  
+  backend backendnodes
+      balance roundrobin
+      option forwardfor
+      http-request set-header X-Forwarded-Port %[dst_port]
+      http-request add-header X-Forwarded-Proto https if { ssl_fc }
+      option httpchk HEAD / HTTP/1.1\r\nHost:localhost
+      server node1 192.168.10.3:8080 check
+      server node2 192.168.10.4:8080 check
+  
+  listen stats
+      bind :32700
+      stats enable
+      stats uri /
+      stats hide-version
+      stats auth someuser:password
 	
 
 #### Explanation:
 
-- global : _The global section defines system level parameters such as file locations and the user and group under which HAProxy is executed. In most cases you will not need to change anything in this section. The user haproxy and group haproxy are both created during installation. The mode attribute controls  how the HAproxy server has to behave, for example in this instance it is acting as a **http** proxy, if this had been a TCP proxy then the value for mode had been **tcp**. This had been described in more detail later.
+- global : _The global section defines system level parameters such as file locations and the user and group under which HAProxy is executed. In most cases you will not need to change anything in this section. The user haproxy and group haproxy are both created during installation. The mode attribute controls  how the HAproxy server has to behave, for example in this instance it is acting as a **http** proxy, if this had been a TCP proxy then the value for mode had been **tcp**. This had been described in more detail later._
 
 
 - defaults : _The defaults section defines additional logging parameters and options related to timeouts and errors. By default, both normal and error messages will be logged._
 
-- frontend : _When you configure load balancing using HAProxy, there are two types of nodes which need to be defined: frontend and backend. The frontend is the node by which HAProxy listens for connections. Backend nodes are those by which HAProxy can forward requests. A third node type, the stats node, can be used to monitor the load balancer and the other two nodes._
+- frontend : _When you configure load balancing using HAProxy, there are two types of nodes which need to be defined: **frontend** and **backend**. The frontend is the node by which HAProxy listens for connections. Backend nodes are those by which HAProxy can forward requests. A third node type, the stats node, can be used to monitor the load balancer and the other two nodes._
 _In the above template file, the frontend node named haproxynode, which is bound to all network interfaces on port 80. It will listen for HTTP connections (it is possible to use TCP mode for other purposes) and it will use the back end backend nodes._
 
-- backend : _This defines the back end  backendnodes and specifies several configuration options such as  the **balance** setting specifies the load-balancing strategy. In the above template, roundrobin strategy is used. This strategy uses each server in turn but allows for weights to be assigned to each server.Other strategies include static-rr, which is similar to roundrobin but does not allow weights to be adjusted on the fly and leastconn, which will forward requests to the server with the lowest number of connections. 
- - _The **forwardfor** option ensures the forwarded request includes the actual client IP address._
- - _The first **http-request** line allows the forwarded request to include the port of the client HTTP request. The second adds the proto-header containing https if ssl_fc, a HAProxy system variable, returns true. This will be the case if the connection was first made via an SSL/TLS transport layer._
- - _Option **httpchk** defines the check HAProxy uses to test if a web server is still valid for forwarding requests. If the server does not respond to the defined request it will not be used for load balancing until it passes the test._
- - _The server lines define the actual server nodes and their IP addresses, to which IP addresses will be forwarded. The servers defined here are node1 and node2, each of which will use the health check you have defined._
-
-Add the optional stats node to the configuration:
+- backend : _This defines the back end  backendnodes and specifies several configuration options such as  the **balance** setting specifies the load-balancing strategy. In the above template, roundrobin strategy is used. This strategy uses each server in turn but allows for weights to be assigned to each server.Other strategies include static-rr, which is similar to roundrobin but does not allow weights to be adjusted on the fly and leastconn, which will forward requests to the server with the lowest number of connections._
+    - _The **forwardfor** option ensures the forwarded request includes the actual client IP address._
+    - _The first **http-request** line allows the forwarded request to include the port of the client HTTP request. The second adds the proto-header containing https if ssl_fc, a HAProxy system variable, returns true. This will be the case if the connection was first made via an SSL/TLS transport layer._
+    - _Option **httpchk** defines the check HAProxy uses to test if a web server is still valid for forwarding requests. If the server does not respond to the defined request it will not be used for load balancing until it passes the test._
+    - _The server lines define the actual server nodes and their IP addresses, to which IP addresses will be forwarded. The servers defined here are node1 and node2, each of which will use the health check you have defined._
 
 - listen : _This is an optional node in the configuration which adds the capability  of querying HAProxy about its status  using an HTTP statistics page.The statistics can be consulted either from the unix socket or from the HTTP page. Both means provide a CSV format as well . In the above template, HAProxy stats node will listen on port 32700 for connections and is configured to hide the version of HAProxy as well as to require a password login. The password offcourse can be replaced with a more convincing one :).
-For a list of all the available fields which can be used to monitor the statistics, and retrieving the output on unix sockets refer the statistics and monitoring section under the [management guide]_ (http://cbonte.github.io/haproxy-dconv/2.3/management.html#9){:target="_blank"}
+
+For a list of all the available fields which can be used to monitor the statistics, and retrieving the output on unix sockets refer the statistics and monitoring section under the [management guide]_(http://cbonte.github.io/haproxy-dconv/2.3/management.html#9){:target="_blank"}
+
 
 #### Layer 7 and Layer 4 Load Balancing
 
