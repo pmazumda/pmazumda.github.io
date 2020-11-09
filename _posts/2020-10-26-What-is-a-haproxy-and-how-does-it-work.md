@@ -34,64 +34,64 @@ The source code of HAProxy which is covered under GPL v2 licence can be download
 The primary and the default configuration file for HAProxy is /etc/haproxy/haproxy.cfg, which is created automatically during installation. This file defines a standard setup without any load balancing, following is a template for the haproxy.cfg with default configurations. The 
 
 
-  global
-      log /dev/log    local0
-      log /dev/log    local1 notice
-      chroot /var/lib/haproxy
-      stats socket /run/haproxy/admin.sock mode 660 level admin
-      stats timeout 30s
-      user haproxy
-      group haproxy
-      daemon
-  
-      # Default SSL material locations
-      ca-base /etc/ssl/certs
-      crt-base /etc/ssl/private
-  
-      # Default ciphers to use on SSL-enabled listening sockets.
-      # For more information, see ciphers(1SSL). This list is from:
-      #  https://hynek.me/articles/hardening-your-web-servers-ssl-ciphers/
-      # An alternative list with additional directives can be obtained from
-      #  https://mozilla.github.io/server-side-tls/ssl-config-generator/?server=haproxy
-      ssl-default-bind-ciphers ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:ECDH+AES128:DH+AES:RSA+AESGCM:RSA+AES:!aNULL:!MD5:!DSS
-      ssl-default-bind-options no-sslv3
-  
-  defaults
-      log     global
-      mode    http
-      option  httplog
-      option  dontlognull
-      timeout connect 5000
-      timeout client  50000
-      timeout server  50000
-      errorfile 400 /etc/haproxy/errors/400.http
-      errorfile 403 /etc/haproxy/errors/403.http
-      errorfile 408 /etc/haproxy/errors/408.http
-      errorfile 500 /etc/haproxy/errors/500.http
-      errorfile 502 /etc/haproxy/errors/502.http
-      errorfile 503 /etc/haproxy/errors/503.http
-      errorfile 504 /etc/haproxy/errors/504.http
-  
-  frontend haproxynode
-      bind *:80
-      mode http
-      default_backend backendnodes
-  
-  backend backendnodes
-      balance roundrobin
-      option forwardfor
-      http-request set-header X-Forwarded-Port %[dst_port]
-      http-request add-header X-Forwarded-Proto https if { ssl_fc }
-      option httpchk HEAD / HTTP/1.1\r\nHost:localhost
-      server node1 192.168.10.3:8080 check
-      server node2 192.168.10.4:8080 check
-  
-  listen stats
-      bind :32700
-      stats enable
-      stats uri /
-      stats hide-version
-      stats auth someuser:password
+    global  
+        log /dev/log    local0
+        log /dev/log    local1 notice
+        chroot /var/lib/haproxy
+        stats socket /run/haproxy/admin.sock mode 660 level admin
+        stats timeout 30s
+        user haproxy
+        group haproxy
+        daemon
+    
+        # Default SSL material locations
+        ca-base /etc/ssl/certs
+        crt-base /etc/ssl/private
+    
+        # Default ciphers to use on SSL-enabled listening sockets.
+        # For more information, see ciphers(1SSL). This list is from:
+        #  https://hynek.me/articles/hardening-your-web-servers-ssl-ciphers/
+        # An alternative list with additional directives can be obtained from
+        #  https://mozilla.github.io/server-side-tls/ssl-config-generator/?server=haproxy
+        ssl-default-bind-ciphers ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:ECDH+AES128:DH+AES:RSA+AESGCM:RSA+AES:!aNULL:!MD5:!DSS
+        ssl-default-bind-options no-sslv3
+    
+    defaults
+        log     global
+        mode    http
+        option  httplog
+        option  dontlognull
+        timeout connect 5000
+        timeout client  50000
+        timeout server  50000
+        errorfile 400 /etc/haproxy/errors/400.http
+        errorfile 403 /etc/haproxy/errors/403.http
+        errorfile 408 /etc/haproxy/errors/408.http
+        errorfile 500 /etc/haproxy/errors/500.http
+        errorfile 502 /etc/haproxy/errors/502.http
+        errorfile 503 /etc/haproxy/errors/503.http
+        errorfile 504 /etc/haproxy/errors/504.http
+    
+    frontend haproxynode
+        bind *:80
+        mode http
+        default_backend backendnodes
+    
+    backend backendnodes
+        balance roundrobin
+        option forwardfor
+        http-request set-header X-Forwarded-Port %[dst_port]
+        http-request add-header X-Forwarded-Proto https if { ssl_fc }
+        option httpchk HEAD / HTTP/1.1\r\nHost:localhost
+        server node1 192.168.10.3:8080 check
+        server node2 192.168.10.4:8080 check
+    
+    listen stats
+        bind :32700
+        stats enable
+        stats uri /
+        stats hide-version
+        stats auth someuser:password
 	
 
 #### Explanation:
@@ -129,11 +129,8 @@ Load  balancing at layer 4 (transport layer) is the simplest way to load balance
 
 Below is a nice Youtube video on the difference between layer 4 and layer 7 loadbalancing and how each of them works. 
 
-<figure class="video_container">
-  <iframe src="https://www.youtube.com/watch?v=ylkAc9wmKhc" frameborder="0" allowfullscreen="true"> </iframe>
-</figure>
 
-[![Layer 4 vs Layer 7](https://img.youtube.com/vi/ylkAc9wmKhc/0.jpg)](https://www.youtube.com/watch?v=ylkAc9wmKhc)
+[![Layer 4 vs Layer 7](https://img.youtube.com/vi/ylkAc9wmKhc/0.jpg)(https://www.youtube.com/watch?v=ylkAc9wmKhc){:target="_blank"}
 
 
 
@@ -151,7 +148,7 @@ Vulnerabilities are very rarely encountered in haproxy, and its architecture sig
 
 ### Performance
 
-HAProxy is an event-driven, non-blocking engine combining a very fast I/O layerwith a priority-based, multi-threaded scheduler. As it is designed with a data forwarding goal in mind, its architecture is optimized to move data as fast as  possible with the least possible operations. It focuses on optimizing the CPU cache's efficiency by sticking connections to the same CPU as long as possible.As such it implements a layered model offering bypass mechanisms at each level ensuring data doesn't reach higher levels unless needed. Most of the processing is performed in the kernel, and HAProxy does its best to help the kernel do the work as fast as possible by giving some hints or by avoiding certain operation when it guesses they could be grouped later. As a result, typical figures show 15% of the processing time spent in HAProxy versus 85% in the kernel in TCP or HTTP close mode, and about 30% for HAProxy versus 70% for the kernel in HTTP keep-alive mode.
+HAProxy is an event-driven, non-blocking engine combining a very fast I/O layer with a priority-based, multi-threaded scheduler. As it is designed with a data forwarding goal in mind, its architecture is optimized to move data as fast as  possible with the least possible operations. It focuses on optimizing the CPU cache's efficiency by sticking connections to the same CPU as long as possible.As such it implements a layered model offering bypass mechanisms at each level ensuring data doesn't reach higher levels unless needed. Most of the processing is performed in the kernel, and HAProxy does its best to help the kernel do the work as fast as possible by giving some hints or by avoiding certain operation when it guesses they could be grouped later. As a result, typical figures show 15% of the processing time spent in HAProxy versus 85% in the kernel in TCP or HTTP close mode, and about 30% for HAProxy versus 70% for the kernel in HTTP keep-alive mode.
 
 A single process can run many proxy instances; configurations as large as 300000 distinct proxies in a single process were reported to run fine. A single core, single CPU setup is far more than enough for more than 99% users, and as such, users of containers and virtual machines are encouraged to use the absolute smallest images they can get to save on operational costs and simplify
 troubleshooting. However the machine HAProxy runs on must never ever swap, and its CPU must not be artificially throttled (sub-CPU allocation in hypervisors) nor be shared with compute-intensive processes which would induce a very high context-switch latency.
