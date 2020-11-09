@@ -29,7 +29,7 @@ The source code of HAProxy which is covered under GPL v2 licence can be download
 
 #### Configuration
 
-The primary and the default configuration file for HAProxy is /etc/haproxy/haproxy.cfg, which is created automatically during installation. This file defines a standard setup without any load balancing, following is a template for the haproxy.cfg with default configurations.
+The primary and the default configuration file for HAProxy is /etc/haproxy/haproxy.cfg, which is created automatically during installation. This file defines a standard setup without any load balancing, following is a template for the haproxy.cfg with default configurations. The 
 
 
 global
@@ -94,7 +94,7 @@ listen stats
 
 #### Explanation:
 
-- global : _The global section defines system level parameters such as file locations and the user and group under which HAProxy is executed. In most cases you will not need to change anything in this section. The user haproxy and group haproxy are both created during installation.
+- global : _The global section defines system level parameters such as file locations and the user and group under which HAProxy is executed. In most cases you will not need to change anything in this section. The user haproxy and group haproxy are both created during installation. The mode attribute controls  how the HAproxy server has to behave, for example in this instance it is acting as a **http** proxy, if this had been a TCP proxy then the value for mode had been **tcp**. This had been described in more detail later.
 
 
 - defaults : _The defaults section defines additional logging parameters and options related to timeouts and errors. By default, both normal and error messages will be logged._
@@ -110,47 +110,42 @@ _In the above template file, the frontend node named haproxynode, which is bound
 
 Add the optional stats node to the configuration:
 
-- listen : _ This iThe HAProxy stats node will listen on port 32700 for connections and is configured to hide the version of HAProxy as well as to require a password login. Replace password with a more secure password. In addition, it is recommended to disable stats login in production.
+- listen : _This is an optional node in the configuration which adds the capability  of querying HAProxy about its status  using an HTTP statistics page.The statistics can be consulted either from the unix socket or from the HTTP page. Both means provide a CSV format as well . In the above template, HAProxy stats node will listen on port 32700 for connections and is configured to hide the version of HAProxy as well as to require a password login. The password offcourse can be replaced with a more convincing one :).
+For a list of all the available fields which can be used to monitor the statistics, and retrieving the output on unix sockets refer the statistics and monitoring section under the [management guide]_ (http://cbonte.github.io/haproxy-dconv/2.3/management.html#9){:target="_blank"}
+
+#### Layer 7 and Layer 4 Load Balancing
+
+The given template is when HAproxy is acting as a HTTP proxy, i,e at the layer 7 ( application layer). Using the layer 7 allows the load balancer to forward requests to different backend servers based on the content of the user’s request, ACL's and various conditions. This mode of load balancing allows you to run multiple web application servers under the same domain and port. 
+
+![Loadbalancing at Layer 7](/img/postimages/l7-loadbalancer.png?raw=true "Loadbalancing at Layer 7")
+
+
+Load  balancing at layer 4 (transport layer) is the simplest way to load balance network traffic to multiple servers. Load balancing this way will forward user traffic based on IP range and port (i.e. if a request comes in for http://abcd.com/context, the traffic will be forwarded to the backend that handles all the requests for abcd.com on port 80). HAProxy can also be used as a layer 4 load balancer. 
+
+![Loadbalancing at Layer 4](/img/postimages/l4-loadbalancer.png?raw=true "Loadbalancing at Layer 4")
+
+
+Below is a nice Youtube video on the difference between layer 4 and layer 7 loadbalancing and how each of them works. 
+
+<figure class="video_container">
+  <iframe src="https://www.youtube.com/watch?v=ylkAc9wmKhc" frameborder="0" allowfullscreen="true"> </iframe>
+</figure>
+
+I have also written a sample application using node.js, which if you run listens on a given port. You can use this sample app to test the layer 4 and layer 7 load balancing with HAProxy, I have done a small writeup on that as well which you can read [here] 
 
 
 ### Monitoring
 
-Now, any incoming requests to the HAProxy node at IP address 203.0.113.2 will be forwarded to an internally networked node with an IP address of either 192.168.1.3 or 192.168.1.4. These backend nodes will serve the HTTP requests. If at any time either of these nodes fails the health check, they will not be used to serve any requests until they pass the test.
+With the given template as above, any incoming requests to the HAProxy node at IP address 203.0.113.2 will be forwarded to an internally networked node with an IP address of either 192.168.10.3 or 192.168.10.4. These backend nodes will serve the HTTP requests. If at any time either of these nodes fails the health check, they will not be used to serve any requests until they pass the test.
 In order to view statistics and monitor the health of the nodes, navigate to the IP address or domain name of the frontend node in a web browser at the assigned port, e.g., http://203.0.113.2:32700. This will display statistics such as the number of times a request was forwarded to a particular node as well the number of current and previous sessions handled by the frontend node.
 
-Security , Maintenance
+### Security , Maintenance
 
-Vulnerabilities are very rarely encountered in haproxy, and its architecture significantly limits their impact and often allows easy workarounds.
-It is  generally suggested starting HAProxy as root because it can then jail itself in a chroot and drop all of its privileges before starting the instances. This is not possible if it is not started as root because only root can execute chroot()
+Vulnerabilities are very rarely encountered in haproxy, and its architecture significantly limits their impact and often allows easy workarounds.It is  generally suggested starting HAProxy as root because it can then jail itself in a chroot and drop all of its privileges before starting the instances.
 
 ### Performance
 
-HAProxy is an event-driven, non-blocking engine combining a very fast I/O layer
-with a priority-based, multi-threaded scheduler. As it is designed with a data
-forwarding goal in mind, its architecture is optimized to move data as fast as
-possible with the least possible operations. It focuses on optimizing the CPU
-cache's efficiency by sticking connections to the same CPU as long as possible.
-As such it implements a layered model offering bypass mechanisms at each level
-ensuring data doesn't reach higher levels unless needed. Most of the processing
-is performed in the kernel, and HAProxy does its best to help the kernel do the
-work as fast as possible by giving some hints or by avoiding certain operation
-when it guesses they could be grouped later. As a result, typical figures show
-15% of the processing time spent in HAProxy versus 85% in the kernel in TCP or
-HTTP close mode, and about 30% for HAProxy versus 70% for the kernel in HTTP
-keep-alive mode.
+HAProxy is an event-driven, non-blocking engine combining a very fast I/O layerwith a priority-based, multi-threaded scheduler. As it is designed with a data forwarding goal in mind, its architecture is optimized to move data as fast as  possible with the least possible operations. It focuses on optimizing the CPU cache's efficiency by sticking connections to the same CPU as long as possible.As such it implements a layered model offering bypass mechanisms at each level ensuring data doesn't reach higher levels unless needed. Most of the processing is performed in the kernel, and HAProxy does its best to help the kernel do the work as fast as possible by giving some hints or by avoiding certain operation when it guesses they could be grouped later. As a result, typical figures show 15% of the processing time spent in HAProxy versus 85% in the kernel in TCP or HTTP close mode, and about 30% for HAProxy versus 70% for the kernel in HTTP keep-alive mode.
 
-A single process can run many proxy instances; configurations as large as
-300000 distinct proxies in a single process were reported to run fine. A single
-core, single CPU setup is far more than enough for more than 99% users, and as
-such, users of containers and virtual machines are encouraged to use the
-absolute smallest images they can get to save on operational costs and simplify
-troubleshooting. However the machine HAProxy runs on must never ever swap, and
-its CPU must not be artificially throttled (sub-CPU allocation in hypervisors)
-nor be shared with compute-intensive processes which would induce a very high
-context-switch latency.
-
-
-
-
-
-
+A single process can run many proxy instances; configurations as large as 300000 distinct proxies in a single process were reported to run fine. A single core, single CPU setup is far more than enough for more than 99% users, and as such, users of containers and virtual machines are encouraged to use the absolute smallest images they can get to save on operational costs and simplify
+troubleshooting. However the machine HAProxy runs on must never ever swap, and its CPU must not be artificially throttled (sub-CPU allocation in hypervisors) nor be shared with compute-intensive processes which would induce a very high context-switch latency.
