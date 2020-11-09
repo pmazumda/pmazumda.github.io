@@ -110,9 +110,9 @@ _In the above template file, the frontend node named haproxynode, which is bound
     - _Option **httpchk** defines the check HAProxy uses to test if a web server is still valid for forwarding requests. If the server does not respond to the defined request it will not be used for load balancing until it passes the test._
     - _The server lines define the actual server nodes and their IP addresses, to which IP addresses will be forwarded. The servers defined here are node1 and node2, each of which will use the health check you have defined._
 
-- listen : _This is an optional node in the configuration which adds the capability  of querying HAProxy about its status  using an HTTP statistics page.The statistics can be consulted either from the unix socket or from the HTTP page. Both means provide a CSV format as well . In the above template, HAProxy stats node will listen on port 32700 for connections and is configured to hide the version of HAProxy as well as to require a password login. The password offcourse can be replaced with a more convincing one :).
+- listen : _This is an optional node in the configuration which adds the capability  of querying HAProxy about its status  using an HTTP statistics page.The statistics can be consulted either from the unix socket or from the HTTP page. Both means provide a CSV format as well . In the above template, HAProxy stats node will listen on port 32700 for connections and is configured to hide the version of HAProxy as well as to require a password login. The password offcourse can be replaced with a more convincing one :)._
 
-For a list of all the available fields which can be used to monitor the statistics, and retrieving the output on unix sockets refer the statistics and monitoring section under the [management guide]_(http://cbonte.github.io/haproxy-dconv/2.3/management.html#9){:target="_blank"}
+For a list of all the available fields which can be used to monitor the statistics, and retrieving the output on unix sockets refer the statistics and monitoring section under the [management guide](http://cbonte.github.io/haproxy-dconv/2.3/management.html#9){:target="_blank"}
 
 
 #### Layer 7 and Layer 4 Load Balancing
@@ -132,6 +132,10 @@ Below is a nice Youtube video on the difference between layer 4 and layer 7 load
 <figure class="video_container">
   <iframe src="https://www.youtube.com/watch?v=ylkAc9wmKhc" frameborder="0" allowfullscreen="true"> </iframe>
 </figure>
+
+[![Layer 4 vs Layer 7](https://img.youtube.com/vi/ylkAc9wmKhc/0.jpg)](https://www.youtube.com/watch?v=ylkAc9wmKhc)
+
+
 
 I have also written a sample application using node.js, which if you run listens on a given port. You can use this sample app to test the layer 4 and layer 7 load balancing with HAProxy, I have done a small writeup on that as well which you can read [here] 
 
