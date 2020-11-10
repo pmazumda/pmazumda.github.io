@@ -14,10 +14,13 @@ tags:
 
 Have you came accross issues with your application which is deployed in Jboss EAP trying to find answers for the following questions.
 
-•	How can I detect leaked datasource connections?
-•	How can I identify code which leaks datasource connections?
+ - How can I detect leaked datasource connections?
 
-**OR** if the server log contains error messages with error codes  _IJ000453_ , _IJ000655_ , it means that there is a connection leak at the code, this can give rise to problems such as application not able to fetch any free connections  from the pool whereas the INACTIVE connections in the database keeps increasing.
+ - How can I identify code which leaks datasource connections?
+
+**OR** 
+
+if the server log contains error messages with error codes  **IJ000453** , **IJ000655** it means that there is a connection leak at the code, this can give rise to problems such as application not able to fetch any free connections  from the pool whereas the **INACTIVE** connections in the database keeps increasing.
 
 
 ### Resolution
@@ -26,7 +29,7 @@ In order to identify the source of the connection leak, we need to enable the ca
 
 You can follow the below steps on how to  enable this:
 
-    Enable the CCM for the datasource. It defaults to **_true_** if it is not explicitly specified but you may set **_use-ccm="true"_** explicitly.
+    Enable the CCM for the datasource. It defaults to **true** if it is not explicitly specified but you may set **use-ccm="true"** explicitly.
     
 
 	<subsystem xmlns="urn:jboss:domain:datasources:1.1">
@@ -38,7 +41,7 @@ You can follow the below steps on how to  enable this:
     </subsystem>
 	
 	
-	Verify that <cached-connection-manager> exists in the jca subsystem and set **_debug="true"._**
+	Verify that <cached-connection-manager> exists in the jca subsystem and set **debug="true".**
 	
 	
     <subsystem xmlns="urn:jboss:domain:jca:1.1">
@@ -54,10 +57,12 @@ The same can be also implemented using  the CLI tool, if you are running the com
 
 
 - Standalone Mode
+
     - /subsystem=jca/cached-connection-manager=cached-connection-manager/:write-attribute(name=debug,value=true)
-
-
+	
+	
 - Domain Mode
+
     - /profile=<your_profile_here>/subsystem=jca/cached-connection-manager=cached-connection-manager/:write-attribute(name=debug,value=true)`
 
     - Setting debug="true" will:
@@ -66,7 +71,8 @@ The same can be also implemented using  the CLI tool, if you are running the com
 	    - Close the leaked connection
         - The additional property error may be used to raise a RuntimeException and generate an ERROR message in the log when it is set to    true.
 
-- NOTE: Set jta also to **true** for the datasources in order for cached connection manager debug to work in Jboss EAP releases earlier than 7.1.
+
+ - **NOTE:** Set jta also to **true** for the datasources in order for cached connection manager debug to work in Jboss EAP releases earlier than 7.1.
 
 
 ### Additional Notes

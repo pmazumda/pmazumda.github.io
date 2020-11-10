@@ -2,10 +2,10 @@
 layout: default
 permalink: "search"
 title: "Search"
-css: "/css/customsearch.css"
+css: "/css/search.css"
 ---
 
-## Search middleware-bytes
+## Search DevOps Club
 
 <div id="google-custom-search">
 <script>
@@ -19,6 +19,12 @@ css: "/css/customsearch.css"
     var s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(gcse, s);
   })();
+  window.onload = function()
+  {
+    var searchBox =  document.getElementById("gsc-i-id");
+    searchBox.placeholder="Search DevOps Club";
+    searchBox.title="Search DevOps Club";   
+   }
 </script>
 <gcse:searchbox></gcse:searchbox>
 <gcse:searchresults></gcse:searchresults>

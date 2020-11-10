@@ -10,7 +10,6 @@ I liked his customization and few of the details like how he has embedded his cu
 
 This blog is still in-progress and I am working on it. Due to some reasons, I am not able to dedicate enough time on it :), I am hoping to finish it off soon , probably by end of this quarter. 
 
-
 Meanwhile , my current blog [Middleware Bytes](https://middlewarebytes.blogspot.com/) is  online and you can browse through the posts. I haven't taken it down, although I wouldn't be publishing any new posts any soon until i migrate it to my new site.
 
 Till then , keep learning, keep sharing and stay safe.. 

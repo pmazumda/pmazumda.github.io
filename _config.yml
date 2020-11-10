@@ -25,7 +25,8 @@ navbar-links:
  ABOUT:
    - ME: "aboutme"
    - THIS SITE: "abouttheblog"
-
+   - COLLABORATORS: "collaborators"
+   
 # --- Google custom search config --- #
 nav-search: "search"
 
@@ -87,11 +88,10 @@ social-network-links:
 
 # Select which share links to show in posts
 share-links-active:
-  twitter: false
   facebook: true
   linkedin: true
   instagram: true
-
+  twitter: false
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
 #url-pretty: "pmazumda.github.io"  
@@ -144,9 +144,6 @@ utterances:
 
 
 # --- Misc --- #
-
-# Facebook App ID
-# fb_app_id: ""
 
 # Excerpt Word Length
 # Truncates the excerpt to the specified number of words on the index page
