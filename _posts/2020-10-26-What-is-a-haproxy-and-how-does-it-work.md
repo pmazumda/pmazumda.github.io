@@ -130,7 +130,7 @@ Load  balancing at layer 4 (transport layer) is the simplest way to load balance
 Below is a nice Youtube video on the difference between layer 4 and layer 7 loadbalancing and how each of them works. 
 
 
-[![Layer 4 vs Layer 7](https://img.youtube.com/vi/ylkAc9wmKhc/0.jpg)(https://www.youtube.com/watch?v=ylkAc9wmKhc){:target="_blank"}
+[![Layer 4 vs Layer 7](https://img.youtube.com/vi/ylkAc9wmKhc/0.jpg)](https://www.youtube.com/watch?v=ylkAc9wmKhc){:target="_blank"}
 
 
 
