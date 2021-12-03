@@ -6,7 +6,7 @@ author: Middlewarebytes
 tags: Docker
 
 ---
-## Issue ?
+### Issue ?
 
 The default directory of docker is *(/var/lib/docker)* and since this directory contains all the images , volumes etc,to get the basic information about your Docker configuration, execute:
 
@@ -32,7 +32,7 @@ or
 > `sudo service docker status`
 
 
-###What next ?
+### What next ?
 
 Next, we need to edit the service startup script to include our changes. The location of the service startup script can be found by running:
 
@@ -40,7 +40,7 @@ Next, we need to edit the service startup script to include our changes. The loc
 
 The output of the command would be like :
  
-![docker command status](img/postimages/dockerstatus.png)
+ ![docker command status](/img/postimages/dockerstatus.png)
  
  
 Edit the file *(/lib/systemd/system/docker.service)* in your text editor.
@@ -59,8 +59,8 @@ Execute the command to check the new docker directory
 
 > `docker info | grep "loop file\|Dir"`
 
-![New root directory](img/postimages/dockerrootdirectory.png)
+ ![New root directory](/img/postimages/dockerrootdirectory.png)
 
-##Summary 
+### Summary 
 
 Docker is an important part of many people’s environments and tooling. Sometimes, Docker feels a bit like magic by solving issues in a very smart way without telling the user how things are done behind the scenes. Still, Docker is a regular tool that stores its heavy parts in locations that can be opened and changed.
