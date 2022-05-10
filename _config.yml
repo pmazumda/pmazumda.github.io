@@ -10,7 +10,7 @@ description: Yet another blog all about devops and middleware.
 # *** If you're not sure what this mean, then leave this section as it is. Only modify the url and baseurl if you know what you're doing!***
 
 # url is the the website domain URL without a trailing slash
-#url: "https://example.com"
+url: "https://devopsclub.co.in"
 
 # baseurl should be an empty string
 #baseurl: ""
