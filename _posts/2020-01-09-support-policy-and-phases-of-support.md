@@ -1,4 +1,13 @@
-\--- layout: post title: Support Policy and Phases of Support Policy date: '2020-01-09T16:14:00.000+05:30' author: Middlewarebytes tags: - WAS Support - ELS - Premier Support - RedHat Jboss Support Date - Extended Support - End Of Life - JBoss - Sustaining Support - Weblogic Support Date - IBM WebSphere Support Date - Support Policy - Lifetime Support Policy modified\_time: '2020-01-09T16:15:06.114+05:30' blogger\_id: tag:blogger.com,1999:blog-1729991490043336487.post-4297593664942810928 blogger\_orig\_url: https://middlewarebytes.blogspot.com/2020/01/support-policy-and-phases-of-support.html ---
+--- 
+layout: post 
+title: Support Policy and Phases of Support Policy
+date: '2020-01-09T16:14:00.000+05:30'
+author: Middlewarebytes
+tags: [WAS,Support,RedHat Jboss Support Date,Extended Support,JBoss,Weblogic,IBM WebSphere]
+modified_time: '2020-01-09T16:15:06.114+05:30'
+blogger_id: tag:blogger.com,1999:blog-1729991490043336487.post-4297593664942810928 
+blogger_orig_url: https://middlewarebytes.blogspot.com/2020/01/support-policy-and-phases-of-support.html 
+---
 
   
 
