@@ -5,7 +5,6 @@ date: '2016-07-13T15:31:00.002+05:30'
 author: Middlewarebytes tags: 
 modified_time: '2016-07-13T15:32:56.554+05:30'
 blogger_orig_url: https://middlewarebytes.blogspot.com/2016/07/how-to-determine-ulimit-settings-of.html 
-
 ---
 
 > Often there are situations arising where we need to determine the ulimit settings of a running application server process  like determining the maximum number of file descriptors for a given process or generating a system core from a process.
@@ -24,7 +23,7 @@ If the PID is already known, proceed to step 2.
 If the PID is unknown then inspect the contents of the following file to determine the PID:
 
 
-<install\_root>/profiles/<profile\_name>/logs/<server\_name>/<server\_name>.pid
+`<install_root>/profiles/<profile_name>/logs/<server_name>/<server_name>.pid`
 
 
 This file should exist if the server is currently running. Exceptional circumstances could lead to a situation where this file exists and the server is not running.
@@ -44,7 +43,7 @@ Location:     /proc/<PID>
 
 
 
-The contents of this file is similar to the output of the __ "ulimit -a" __ command.
+The contents of this file is similar to the output of the __ulimit__ __-a__ command.
 
 
   
@@ -52,29 +51,22 @@ This file will have a list of ulimit parameters and their associated values for 
 
 ```
 
-Limit                     Soft Limit   ...
-------------------------------------------
+Limit                     Soft Limit  
 
 Max cpu time              unlimited 
-------------------------------------
 
 Max file size             unlimited 
-------------------------------------
 
 Max data size             unlimited 
-------------------------------------
 
 Max stack size            10485760  
-------------------------------------
 
 Max core file size        unlimited 
-------------------------------------
 
 Max processes             unlimited 
-------------------------------------
 
-Max open files            8192      
-------------------------------------
+Max open files            8192   
+
 ```
 
 ### Limitations:

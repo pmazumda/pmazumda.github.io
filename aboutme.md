@@ -16,19 +16,19 @@ bigimg:
 subtitle: A little more about me!!
 ---
 
-<i class="mdi mdi-account"></i> My name is Pinak Mazumdar and I live in <i class="mdi mdi-earth"></i> [Bangalore/Bengaluru](https://goo.gl/maps/qsJRuHBYRJ5xRXqZ6){:target="_blank"},India. The Centre of India's high-tech industry and widely regarded as the **"Silicon Valley"** of India. Some of the major IT giants  have their headquarters housed here. 
+<i class="mdi mdi-account"></i>**Hi**, My name is *Pinak Mazumdar* and I currently live in <i class="mdi mdi-earth"></i> [Bangalore/Bengaluru](https://goo.gl/maps/qsJRuHBYRJ5xRXqZ6){:target="_blank"},India. The Centre of India's high-tech industry and widely regarded as the **"Silicon Valley"** of India.
 
-Apart from the tech side, the city also has a lot of historical importance which dates back to  around 890 AD. There are a lot of important and magnificent tourist destinations as well around the city. I came here in the year 2007 and since then living here. At present I am working as a Senior IT consultant for a leading  IT company. Apart from an IT engineer , my interests involve travelling(<i class="mdi mdi-beach"></i>), photography(<i class="mdi mdi-camera"></i>),working with Arduino (<i class="mdi mdi-robot"></i>), cooking(<i class="mdi mdi-food-fork-drink"></i>). My love for travel, food and work have taken me to different places around the world.  
-
-## <i class="mdi mdi-school"> Education  </i>
-
-I graduated with a Bachelor's in Computer Science from Bangalore University in 2010.
-
-Over the years I have  worked on multiple  projects accross different domains( BFS,Insurance,Media and Telecom ) in different roles starting from middleware administration to automation. I enjoy writing reusable software tools and code for middleware infrastructure automation, devops tools etc. Below is a brief timeline of my career so far and some pieces of work and associated technologies I have worked with.
+Apart from the tech side, the city also has a lot of historical importance which dates back to  around 890 AD. There are a lot of important and magnificent tourist destinations as well around the city. Apart from my day job of being a cloud and devops professional, my interests involve travelling(<i class="mdi mdi-beach"></i>),cycling(<i class="mdi mdi-bike"></i>),photography(<i class="mdi mdi-camera"></i>) working with arduino (<i class="mdi mdi-robot"></i>), cooking(<i class="mdi mdi-food-fork-drink"></i>). My love for travel, food and work have taken me to different places around the world.  
 
 ## <i class="mdi mdi-briefcase"> Work </i> 
 
-### <i class="mdi mdi-calendar-month"> </i> 2016-Present
+Over the years I have  worked on multiple  projects accross different domains( BFS,Insurance,Media and Telecom ) in different roles starting from middleware administration to automation. I enjoy writing reusable software tools and code for middleware infrastructure automation, devops tools etc. Below is a brief timeline of my career so far and some pieces of work and associated technologies I have worked with.
+
+### <i class="mdi mdi-calendar-month"> </i> 2021-Present
+
+Working as a DevOps Architect for product infrastructure planning, devising highly-available system topologies and architectures, devising advisories, writing technical documentations and an individual contributor for developing solutions for extending cloud native projects.
+
+### <i class="mdi mdi-calendar-month"> </i> 2016-2021
 
 Working as a Senior Consultant for product infrastructure planning, devising highly-available system topologies and architectures, devising advisories,writing technical documentations and an individual contributor for developing solutions for extending cloud native projects.
     
@@ -50,5 +50,5 @@ You can also view my somewhat outdated [resume](/Resume.pdf),but I am sure you w
 
 ## <i class="mdi mdi-contacts"> </i> Contact Me
 
-You can email(<i class="mdi mdi-gmail"></i>) me, find me on linkedIn(<i class="mdi mdi-linkedin"></i>)or facebook (<i class="mdi mdi-facebook"></i>), I would love to collaborate and speak to you.
+You can email(<i class="mdi mdi-gmail"></i>) me, find me on LinkedIn(<i class="mdi mdi-linkedin"></i>)or facebook (<i class="mdi mdi-facebook"></i>), I would love to collaborate and speak to you.
    
