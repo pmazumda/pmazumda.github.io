@@ -46,11 +46,11 @@ Worked as an Oracle Fusion Middleware Engineer and responsible for building and 
 
 Worked as Middleware and Build Engineer for a credit card acquisition platform while developing new age services and interfaces to integrate with TPA.
 
-You can also view my somewhat outdated [resume](/Resume.pdf),but I am sure you would like to know more about all the interesting work I have done till now which is why you can email me or find me on LinkedIn. Otherwise also, I love making friends and would be love to talk  to you.
+You can also view my somewhat outdated [resume](/Resume.pdf),but I am sure you would like to know more about all the interesting work I have done till now which is why you can email me or find me on LinkedIn. Otherwise also, I love making friends and would love to talk to you.
 
 ## <i class="mdi mdi-contacts"> </i> Contact Me
 
-Here are my coordinates 
+Below are my coordinates 
 
-E-mail(<i class="mdi mdi-gmail"></i>) LinkedIn(<i class="mdi mdi-linkedin"></i>)
+[E-mail](mazumdar.pinak@gmail.com)(<i class="mdi mdi-gmail"></i>) [LinkedIn](https://www.linkedin.com/in/pinakmazumdar/)(<i class="mdi mdi-linkedin"></i>)
    
