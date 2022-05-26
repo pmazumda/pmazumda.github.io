@@ -46,11 +46,13 @@ navbar-col: "#F5F5F5"
 navbar-text-col: "#404040"
 navbar-children-col: "#F5F5F5"
 page-col: "#FFFFFF"
+text-col: "#404040"                   
 link-col: "#008AFF"
 hover-col: "#0085A1"
 footer-col: "#F5F5F5"
 footer-text-col: "#777777"
 footer-link-col: "#404040"
+footer-hover-col: "#0085A1"                           
 
 # Alternatively, the navbar, footer, and page background can be set to use background images
 # instead of colour
@@ -78,7 +80,7 @@ social-network-links:
 #  reddit: yourname
 #  xing: yourname
 #  snapchat:
-#  instagram:
+  instagram: pinak_capri
 #  youtube: user/
 #  spotify: yourname
 #  telephone:
@@ -88,7 +90,7 @@ social-network-links:
 
 # Select which share links to show in posts
 share-links-active:
-  facebook: true
+  facebook: false
   linkedin: true
   instagram: true
   twitter: false
@@ -148,6 +150,14 @@ utterances:
 # Excerpt Word Length
 # Truncates the excerpt to the specified number of words on the index page
 excerpt_length: 50
+                                                           # Whether or not to show an excerpt for every blog post in the feed page
+feed_show_excerpt: true
+
+# Whether or not to show a list of tags below each post preview in the feed page
+feed_show_tags: true
+
+# Add a search button to the navbar
+post_search: true    
 
 # Character used to separate site title and description in HTML document title
 # and RSS feed title

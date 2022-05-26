@@ -18,7 +18,6 @@ Have you came accross issues with your application which is deployed in Jboss EA
 
  - How can I identify code which leaks datasource connections?
 
-**OR** 
 
 if the server log contains error messages with error codes  **IJ000453** , **IJ000655** it means that there is a connection leak at the code, this can give rise to problems such as application not able to fetch any free connections  from the pool whereas the **INACTIVE** connections in the database keeps increasing.
 
