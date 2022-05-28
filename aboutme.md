@@ -8,11 +8,6 @@ bigimg:
   - "/img/bgimg/places/oman_trek.jpg" : "The trek to the hidden treasure@Oman"
   - "/img/bgimg/places/colombo.jpg" : "Some moments of solitude@Colombo"
   - "/img/bgimg/places/colombo_monastery.jpg" : "Peace and tranquility@Colombo"
-  - "/img/bgimg/places/dubai_creek.jpg" : "Man-made marvels@Dubai"
-  - "/img/bgimg/places/bangkok_hotel.jpg" : "Lazy morning@Bangkok"
-  - "/img/bgimg/places/ayuthya_thailand.jpg" : "Ruins of the past@Thailand"
-  - "/img/bgimg/places/thumphu_evening.jpg" : "An Evening in Thimphu@Bhutan"
-  - "/img/bgimg/places/earlymorninginbhutan.jpg" : "Energetic Start@Thimphu"
 subtitle: A little more about me!!
 ---
 
@@ -50,7 +45,9 @@ You can also view my somewhat outdated [resume](/Resume.pdf),but I am sure you w
 
 ## <i class="mdi mdi-contacts"> </i> Contact Me
 
-Below are my coordinates 
+Below are my coordinates:-
 
-[E-mail](mazumdar.pinak@gmail.com)(<i class="mdi mdi-gmail"></i>) [LinkedIn](https://www.linkedin.com/in/pinakmazumdar/)(<i class="mdi mdi-linkedin"></i>)
+<i class="mdi mdi-gmail"></i> mazumdar.pinak@gmail.com
+
+[<i class="mdi mdi-linkedin"></i>] (https://www.linkedin.com/in/pinakmazumdar/)
    
