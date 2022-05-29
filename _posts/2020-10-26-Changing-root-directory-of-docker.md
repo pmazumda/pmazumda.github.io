@@ -6,7 +6,7 @@ author: Middlewarebytes
 tags: Docker
 
 ---
-### Issue ?
+### I want to change the default directory in docker.. 
 
 The default directory of docker is *(/var/lib/docker)* and since this directory contains all the images , volumes etc,to get the basic information about your Docker configuration, execute:
 

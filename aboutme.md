@@ -35,7 +35,7 @@ Worked as a Software Engineer responsible for providing post-sales consultancy a
 
 ### <i class="mdi mdi-calendar-month"></i> 2013-2015
 
-Worked as an Oracle Fusion Middleware Engineer and responsible for building and deploying an infrastrcuture in AWS Cloud for an existing  publishing house.  Experienced on Fusion Middleware Stacks such as Oracle SOA suite and WebCenter Content.
+Worked as an Oracle Fusion Middleware Engineer and responsible for building and deploying an infrastrcuture in AWS Cloud for an existing  publishing house.Experienced on Fusion Middleware Stacks such as Oracle SOA suite and WebCenter Content.
 
 ### <i class="mdi mdi-calendar-month"></i> 2010-2013
 
@@ -47,7 +47,7 @@ You can also view my somewhat outdated [resume](/Resume.pdf),but I am sure you w
 
 Below are my coordinates:-
 
-<i class="mdi mdi-gmail"></i> mazumdar.pinak@gmail.com
+<i class="mdi mdi-gmail"></i> [Gmail] mazumdar.pinak@gmail.com
 
-[<i class="mdi mdi-linkedin"></i>] (https://www.linkedin.com/in/pinakmazumdar/)
+<i class="mdi mdi-linkedin"></i> [LinkedIn](https://www.linkedin.com/in/pinakmazumdar/
    
