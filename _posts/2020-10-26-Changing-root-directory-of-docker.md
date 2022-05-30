@@ -47,7 +47,7 @@ Edit the file *(/lib/systemd/system/docker.service)* in your text editor.
 
 Add -g *(/path/to/docker/)* at the end of ExecStart directive. The complete line should look like this.
 
-> ExecStart=/usr/bin/dockerd -g *(/path/to/docker/)*
+> `ExecStart=/usr/bin/dockerd -g *(/path/to/docker/)*`
 
 Execute the below command
 
