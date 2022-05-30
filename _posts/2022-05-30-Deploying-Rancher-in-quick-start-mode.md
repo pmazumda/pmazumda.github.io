@@ -14,8 +14,6 @@ tags:
 By now I think most of us would have heard already heard about  Kubernetes and in some manner have worked with it. I am not going to  write anything about Kubernetes here but a software which I see a lot of organizations have started  using and in some ways it compliments a lot to the k8s stack we have been using in our teams.
 
                                *A quick intro on Rancher*
-
-                   Rancher is a software or a technology to manage k8s clusters, offcourse it can even create k8s clusters for you.
 Nowdays, it is not unusual for a company to run a handful of k8s clusters with each cluster having special configuration and access-control settings, sometimes these clusters hosted on different cloud stacks or datacenters, Rancher can effectively manage all such k8s clusters acting as a single pan of glass for sorts of administration and management activities. 
 
 With its management UI, users can make broad changes to a cluster or a group of clusters from a central location.
