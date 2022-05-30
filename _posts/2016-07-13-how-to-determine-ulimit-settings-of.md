@@ -2,10 +2,7 @@
 layout: post 
 title: How to determine the ulimit settings of a running WebSphere Application Server Process on Linux. 
 date: '2016-07-13T15:31:00.002+05:30' 
-author: Middlewarebytes 
-tags:
-- AppServer
-- Server
+author: Middlewarebytes tags: 
 modified_time: '2016-07-13T15:32:56.554+05:30'
 blogger_orig_url: https://middlewarebytes.blogspot.com/2016/07/how-to-determine-ulimit-settings-of.html 
 ---
@@ -39,7 +36,6 @@ The number contained within this file is the PID of the running server. We can e
 ### Step 2: Once the PID is known, inspect the file at the following location:
 
 Location:     /proc/<PID>
-
 
 The contents of this file is similar to the output of the __ulimit__ __-a__ command.This file will have a list of ulimit parameters and their associated values for the specified PID.
 

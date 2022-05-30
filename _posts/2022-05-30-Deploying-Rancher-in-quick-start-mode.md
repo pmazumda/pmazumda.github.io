@@ -13,7 +13,9 @@ tags:
 
 By now I think most of us would have heard already heard about  Kubernetes and in some manner have worked with it. I am not going to  write anything about Kubernetes here but a software which I see a lot of organizations have started  using and in some ways it compliments a lot to the k8s stack we have been using in our teams.
 
-                               *A quick intro on Rancher*
+
+*A quick intro on Rancher*
+
 Nowdays, it is not unusual for a company to run a handful of k8s clusters with each cluster having special configuration and access-control settings, sometimes these clusters hosted on different cloud stacks or datacenters, Rancher can effectively manage all such k8s clusters acting as a single pan of glass for sorts of administration and management activities. 
 
 With its management UI, users can make broad changes to a cluster or a group of clusters from a central location.
@@ -43,7 +45,7 @@ Rancher should work with any modern Linux distribution,  I have used Ubuntu  bec
 
 `docker ps`
  
-4. Log in to the Rancher UI using **<VM-IP>:<PORT>**, where *PORT* is the mapped port given above in the Docker run command. If everything is up and running, one should see the below screen in the browser on hitting the URL.
+4. Log in to the Rancher UI using **_<VM-IP>:<PORT>_**, where _PORT_ is the mapped port given above in the Docker run command. If everything is up and running, one should see the below screen in the browser on hitting the URL.
 
 ![Howdy! Welcome to Rancher](/img/postimages/rancherui.jpg?raw=true "Rancher")
 
