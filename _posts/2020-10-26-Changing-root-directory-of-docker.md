@@ -3,6 +3,11 @@ layout: post
 title: Change Docker Root directory
 date: '2021-12-27T10:30:00.000+05:30'
 author: Middlewarebytes
+sitemap:
+  lastmod: 2022-05-31
+  priority: 0.7
+  changefreq: 'monthly'
+  exclude: 'no'
 tags: Docker
 
 ---

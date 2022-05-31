@@ -3,6 +3,11 @@ layout: post
 title: What is a HAProxy and how does it work ?
 date: '2020-10-26T20:47:00.000+05:30'
 author: Middlewarebytes
+sitemap:
+  lastmod: 2022-05-31
+  priority: 0.7
+  changefreq: 'monthly'
+  exclude: 'no'
 tags:
 - WebServer
 - Loadbalancer
@@ -10,6 +15,7 @@ tags:
 - reverseproxy
 - TCP
 - http
+
 ---
 
 

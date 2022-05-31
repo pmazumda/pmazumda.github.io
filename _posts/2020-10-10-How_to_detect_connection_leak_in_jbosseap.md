@@ -3,6 +3,11 @@ layout: post
 title: How to identify a connection leak in Jboss Enterprise Application Server(6/7)?
 date: '2020-10-28T10:47:00.000+05:30'
 author: Middlewarebytes
+sitemap:
+  lastmod: 2022-05-31
+  priority: 0.7
+  changefreq: 'monthly'
+  exclude: 'no'
 tags:
 - Application Server
 - JBoss

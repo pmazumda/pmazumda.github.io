@@ -3,6 +3,11 @@ layout: post
 title: Beginning with Docker
 date: '2020-12-07T09:44:00.000+05:30'
 author: Middlewarebytes
+sitemap:
+  lastmod: 2022-05-31
+  priority: 0.7
+  changefreq: 'monthly'
+  exclude: 'no'
 tags: Docker
 
 ---

@@ -3,6 +3,11 @@ layout: default
 permalink: "search"
 title: "Search"
 css: "/css/customsearch.css"
+sitemap:
+  lastmod: 2022-05-14
+  priority: 0.7
+  changefreq: 'monthly'
+  exclude: 'yes'
 ---
 
 ## Search middleware-bytes
