@@ -11,7 +11,7 @@ bigimg:
 subtitle: A few words about me and  why I am here...
 ---
 
-          I <sub>used to write previously on Blogger, it was my collection of some important notes I had jotted down for referencing in future while working, I haven't taken it down yet, although I am not writing any new posts on it. I am also working on a travel blog with all my travel stories and recommendations, however that is something still **Work in Progress** and I would update about it as and when it gets completed.
+I <sub>used to write previously on Blogger, it was my collection of some important notes I had jotted down for referencing in future while working, I haven't taken it down yet, although I am not posting anythere in there. Since I am travel fanatic, currently I am also working on a travelogue with all my travel stories and experiences however that is something still **Work in Progress** and I hope to complete it soon :smile:
 
 I started working on this blog last summer and the idea behind working on this blog is that I am a strong believer in the below words..
 
@@ -20,6 +20,6 @@ I started working on this blog last summer and the idea behind working on this b
 
 I mean **yes** we can learn a lot from each other's learnings, experiences, mistakes; nevertheless the problems for which some of us might already  have the solution but not all of us and hence this is it :).
 
-It's always good to receive positive and constructive feedback for your work - hence I would be more than happy if you have any suggestions or ideas, so feel free to post it to me. **_Enjoy__the__read_**
+It's always good to receive positive and constructive feedback for your work - hence I would be more than happy if you have any suggestions or ideas, so feel free to post it to me. **_Enjoy_the_read_**
 
 
