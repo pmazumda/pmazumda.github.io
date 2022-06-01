@@ -46,7 +46,7 @@ navbar-col: "#F5F5F5"
 navbar-text-col: "#404040"
 navbar-children-col: "#F5F5F5"
 #page-col: "#FFFFFF"
-page-col: "#D3D3D3"
+page-col: "#008080"
 text-col: "#404040"                   
 link-col: "#008AFF"
 hover-col: "#0085A1"
@@ -75,13 +75,14 @@ author:
 # If you want to add a new link that isn't here, you'll need to also edit the file _data/SocialNetworks.yml
 social-network-links:
   rss: true
-  email: "mazumdar.pinak@gmail.com"
-  facebook: peenakm
+  email: "mazumdar.pinak@gmail.com" 
   linkedin: pinakmazumdar
+  instagram: pinak_capri
+#  facebook: peenakm
 #  reddit: yourname
 #  xing: yourname
 #  snapchat:
-  instagram: pinak_capri
+
 #  youtube: user/
 #  spotify: yourname
 #  telephone:
@@ -97,7 +98,7 @@ share-links-active:
   twitter: false
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
-#url-pretty: "pmazumda.github.io"  
+url-pretty: "devopsclub.co.in"  
 
 # --- Web Statistics Section --- #
 
