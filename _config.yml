@@ -60,7 +60,8 @@ footer-hover-col: "#0085A1"
 
 navbar-img: "/img/headernfooter.jpg"
 footer-img: "/img/headernfooter.jpg"
-#page-img: "/img/bgimage.png"
+
+page-img: "/img/headernfooter.jpg"
 
 # --- Footer options --- #
 
@@ -72,7 +73,6 @@ author:
 # Select your active Social Network Links.
 # Uncomment the links you want to show in the footer and add your information to each link.
 # You can reorder the items to define the link order.
-# If you want to add a new link that isn't here, you'll need to also edit the file _data/SocialNetworks.yml
 social-network-links:
   rss: true
   email: "mazumdar.pinak@gmail.com" 
@@ -98,7 +98,7 @@ share-links-active:
   twitter: false
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "devopsclub.co.in"  
+#url-pretty: "devopsclub.co.in"  
 
 # --- Web Statistics Section --- #
 
