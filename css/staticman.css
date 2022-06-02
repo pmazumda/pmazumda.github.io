@@ -81,10 +81,10 @@
 /*
  Help text
  ========================================================================== */
-.staticman-comments .form-text {
+.staticman-comments .help-block {
   color: #898c8e;
 }
-.staticman-comments .form-text {
+.staticman-comments .help-block {
   display: block;
   margin-bottom: 1em;
   line-height: 1em;
