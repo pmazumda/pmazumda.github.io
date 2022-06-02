@@ -42,26 +42,47 @@ nav-search: "search"
 
 # Personalize the colors in your website. Colour values can be any valid CSS colour
 
-navbar-col: "#F5F5F5"
-navbar-text-col: "#404040"
-navbar-children-col: "#F5F5F5"
+#navbar-col: "#F5F5F5"
+#navbar-text-col: "#404040"
+#navbar-children-col: "#F5F5F5"
 #page-col: "#FFFFFF"
-page-col: "#D3D3D3"
-text-col: "#404040"                   
+#page-col: "#D3D3D3"
+#text-col: "#404040"                   
+#link-col: "#008AFF"
+#hover-col: "#0085A1"
+#footer-col: "#F5F5F5"
+#footer-text-col: "#777777"
+#footer-link-col: "#404040"
+#footer-hover-col: "#0085A1"                           
+
+
+navbar-col: "#EAEAEA"
+navbar-text-col: "#404040"
+navbar-border-col: "#DDDDDD"
+page-col: "#FFFFFF"
+text-col: "#404040"
 link-col: "#008AFF"
 hover-col: "#0085A1"
-footer-col: "#F5F5F5"
+footer-col: "#EAEAEA"
 footer-text-col: "#777777"
 footer-link-col: "#404040"
-footer-hover-col: "#0085A1"                           
+footer-hover-col: "#0085A1"
+
+
+
+
+
+
+
+
 
 # Alternatively, the navbar, footer, and page background can be set to use background images
 # instead of colour
 
-navbar-img: "/img/headernfooter.jpg"
-footer-img: "/img/headernfooter.jpg"
+#navbar-img: "/img/headernfooter.jpg"
+#footer-img: "/img/headernfooter.jpg"
 
-page-img: "/img/headernfooter.jpg"
+#page-img: "/img/headernfooter.jpg"
 
 # --- Footer options --- #
 
