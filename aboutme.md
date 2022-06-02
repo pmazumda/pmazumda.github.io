@@ -15,7 +15,7 @@ subtitle: A little more about me!!
 
 Apart from the tech side, this city also has a lot of historical importance which dates back to  around 890 AD. There are a lot of important and magnificent tourist destinations as well around the city. Apart from my day job of being a cloud and devops professional, my interests involve travelling(<i class="mdi mdi-beach"></i>),cycling(<i class="mdi mdi-bike"></i>),photography(<i class="mdi mdi-camera"></i>) working with arduino (<i class="mdi mdi-robot"></i>) and sometimes cooking(<i class="mdi mdi-food-fork-drink"></i>). My love for travel, food and work have taken me to different places around the world.  
 
-## <i class="mdi mdi-briefcase"> Work </i> 
+### <i class="mdi mdi-briefcase"> Work </i> 
 
 Over the years I have  worked on multiple  projects accross different domains( BFS,Insurance,Media and Telecom ) in different roles starting from middleware administration to automation. I enjoy writing reusable software tools and code for middleware infrastructure automation, devops tools etc. Below is a brief timeline of my career so far and some pieces of work and associated technologies I have worked with.
 
