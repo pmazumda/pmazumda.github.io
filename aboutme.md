@@ -7,7 +7,6 @@ bigimg:
   - "/img/bgimg/places/oman.jpg" : "The fallen star in Oman"
   - "/img/bgimg/places/oman_trek.jpg" : "The trek to the hidden treasure@Oman"
   - "/img/bgimg/places/colombo.jpg" : "Some moments of solitude@Colombo"
-  - "/img/bgimg/places/colombo_monastery.jpg" : "Peace and tranquility@Colombo"
 subtitle: A little more about me!!
 ---
 
