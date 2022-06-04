@@ -45,14 +45,16 @@ You can also view my somewhat outdated [resume](/Resume.pdf),but I am sure you w
 ## <i class="mdi mdi-contacts"> </i> You can also send me a quick message using the form below:
 
 <form action="https://formspree.io/f/mdobjnoy" method="POST" class="form" id="contact-form">
+ <div class="container">
   <div class="row">
-    <div class="col-6">
+    <div class="col-sm">
       <input type="email" name="_replyto" required="required" class="form-control form-control-lg" placeholder="Email" title="Email">
     </div>
-    <div class="col-6">
+    <div class="col-sm">
       <input type="text" name="name" class="form-control form-control-lg" placeholder="Name" title="Name">
     </div>
   </div>
+ </div>
   <input type="hidden" name="_subject" value="Blog posts">
   <textarea type="text" name="content" class="form-control form-control-lg" placeholder="Message" title="Message" required="required" rows="3"></textarea>
   <input type="text" name="_gotcha" style="display:none">
