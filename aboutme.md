@@ -42,15 +42,14 @@ Worked as Middleware and Build Engineer for a credit card acquisition platform w
 
 You can also view my somewhat outdated [resume](/Resume.pdf),but I am sure you would like to know more about all the interesting work I have done till now which is why you can email me or find me on LinkedIn or you can  also send me a quick message using the form below:
 
-## <i class="mdi mdi-contacts"> </i>
+## <i class="mdi mdi-contacts"> </i> You can also send me a quick message using the form below:
 
 <form action="https://formspree.io/f/mdobjnoy" method="POST" class="form" id="contact-form">
-  <p>You can also send me a quick message using the form below:</p>
   <div class="row">
-    <div class="col-7">
+    <div class="col-6">
       <input type="email" name="_replyto" required="required" class="form-control form-control-lg" placeholder="Email" title="Email">
     </div>
-    <div class="col-7">
+    <div class="col-6">
       <input type="text" name="name" class="form-control form-control-lg" placeholder="Name" title="Name">
     </div>
   </div>
