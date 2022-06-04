@@ -42,7 +42,7 @@ nav-search: "search"
 
 # Personalize the colors in your website. Colour values can be any valid CSS colour
 #navbar-col: "#EAEAEA"
-navbar-col: "#808080"
+navbar-col: "#C0C0C0"
 navbar-text-col: "#404040"
 navbar-border-col: "#DDDDDD"
 page-col: "#FFFFFF"
@@ -50,8 +50,8 @@ text-col: "#404040"
 link-col: "#008AFF"
 hover-col: "#0085A1"
 #footer-col: "#EAEAEA"
-footer-col: "#808080"
-footer-text-col: "#777777"
+footer-col: "#C0C0C0"
+footer-text-col: "#404040"
 footer-link-col: "#404040"
 footer-hover-col: "#0085A1"
 
@@ -94,7 +94,7 @@ social-network-links:
   email: "mazumdar.pinak@gmail.com" 
   linkedin: pinakmazumdar
   instagram: pinak_capri
-#  facebook: peenakm
+  facebook: peenakm
 #  reddit: yourname
 #  xing: yourname
 #  snapchat:
@@ -108,7 +108,7 @@ social-network-links:
 
 # Select which share links to show in posts
 share-links-active:
-  facebook: false
+  facebook: true
   linkedin: true
   instagram: true
   twitter: false
