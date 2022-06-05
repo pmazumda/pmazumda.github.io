@@ -42,7 +42,7 @@ nav-search: "search"
 
 # Personalize the colors in your website. Colour values can be any valid CSS colour
 #navbar-col: "#EAEAEA"
-navbar-col: "#C0C0C0"
+navbar-col: "##dcdcdc"
 navbar-text-col: "#404040"
 navbar-border-col: "#DDDDDD"
 page-col: "#FFFFFF"
@@ -50,11 +50,11 @@ text-col: "#404040"
 link-col: "#008AFF"
 hover-col: "#0085A1"
 #footer-col: "#EAEAEA"
-footer-col: "#C0C0C0"
+footer-col: "##dcdcdc"
 footer-text-col: "#404040"
 footer-link-col: "#404040"
 footer-hover-col: "#0085A1"
-navbar-children-col: "#C0C0C0"
+navbar-children-col: "##dcdcdc"
 
 #navbar-col: "#F5F5F5"
 #navbar-text-col: "#404040"
@@ -233,3 +233,9 @@ plugins:
 
 
 theme: jekyll-theme-slate
+
+
+##Google AdSense##
+
+
+
