@@ -47,10 +47,11 @@ You can also view my somewhat outdated [resume](/Resume.pdf),but I am sure you w
 <form action="https://formspree.io/f/mdobjnoy" method="POST" class="form" id="contact-form">
  <div class="container">
   <div class="row">
-    <div class="col-sm">
+    <div class="col-6">
       <input type="email" name="_replyto" required="required" class="form-control form-control-lg" placeholder="Email" title="Email">
     </div>
-    <div class="col-sm">
+	<br>
+    <div class="col-6">
       <input type="text" name="name" class="form-control form-control-lg" placeholder="Name" title="Name">
     </div>
   </div>

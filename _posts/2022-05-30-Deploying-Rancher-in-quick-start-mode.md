@@ -19,7 +19,7 @@ tags:
 By now I think most of us would have heard already heard about  Kubernetes and in some manner have worked with it. I am not going to  write anything about Kubernetes here but a software which I see a lot of organizations have started  using and in some ways it compliments a lot to the k8s stack we have been using in our teams.
 
 
-**_A_quick_intro_on_Rancher_**
+**_A quick intro on Rancher_**
 
 -----------------------------------
 

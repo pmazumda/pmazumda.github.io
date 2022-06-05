@@ -54,7 +54,7 @@ footer-col: "#C0C0C0"
 footer-text-col: "#404040"
 footer-link-col: "#404040"
 footer-hover-col: "#0085A1"
-
+navbar-children-col: "#C0C0C0"
 
 #navbar-col: "#F5F5F5"
 #navbar-text-col: "#404040"
