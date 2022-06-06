@@ -12,7 +12,7 @@ tags: Docker
 
 ---
 
-## Beginning wih  Docker.. 
+## Beginning with  Docker.. 
 
 
 1. To get the basic information about your Docker configuration, execute:
