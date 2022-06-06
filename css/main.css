@@ -866,3 +866,7 @@ form [type="reset"]:focus {
 form select {
   text-transform: none;
 }
+
+nav-search-icon {
+  font-size: 0.825rem;
+}
