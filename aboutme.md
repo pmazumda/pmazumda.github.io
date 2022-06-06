@@ -45,22 +45,33 @@ You can also view my somewhat outdated [resume](/Resume.pdf),but I am sure you w
 **_You can also send me a quick message using the form below_**  <i class="fa-solid fa-message"></i>
 
 
-<form action="https://formspree.io/f/mdobjnoy" method="POST" class="form" id="contact-form">
- <div class="container">
+
+<form action="https://formspree.io/f/mdobjnoy" method="POST" class="form" id="contact-form"> 
   <div class="row">
-    <div class="col-sm-6">
-      <input type="email" name="_replyto" required="required" class="form-control form-control-lg" placeholder="Email" title="Email">
-    </div>
-	<br>
-    <div class="col-sm-6">
-      <input type="text" name="name" class="form-control form-control-lg" placeholder="Name" title="Name">
-    </div>
-  </div>
- </div>
-  <input type="hidden" name="_subject" value="Blog posts">
-  <textarea type="text" name="content" class="form-control form-control-lg" placeholder="Message" title="Message" required="required" rows="3"></textarea>
-  <input type="text" name="_gotcha" style="display:none">
-  <input type="hidden" name="_next" value="?message=Your message was sent successfully, thanks!" />
+
+   <div class="col">
+
+    <input type="email" name="_replyto" required="required" class="form-control form-control-lg" placeholder="Email" title="Email">
+
+   </div>
+
+  <div class="col">
   
-  <button type="submit" class="btn btn-lg btn-primary">Send</button>
+  <input type="text" name="name" class="form-control form-control-lg" placeholder="Name" title="Name">
+  
+  </div>
+
+  </div>
+   <input type="hidden" name="_subject" value="Blog posts">
+   
+   <div class="row">
+   
+   <textarea type="text" name="content" class="form-control" placeholder="Message" title="Message" required="required" rows="3"></textarea>
+   
+   </div>    
+    <input type="text" name="_gotcha" style="display:none">
+    
+	<input type="hidden" name="_next" value="?message=Your message was sent successfully, thanks!" />
+	
+    <button type="submit" class="btn btn-lg btn-primary">Send</button>
 </form>
