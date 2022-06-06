@@ -10,7 +10,7 @@ css: "/css/search.css"
 <div id="google-custom-search">
 <script>
   (function() {
-    var cx = '87fc490fe40dc4708:ra7nbqw5yfo';
+    var cx = '87fc490fe40dc4708';
     var gcse = document.createElement('script');
     gcse.type = 'text/javascript';
     gcse.async = true;
