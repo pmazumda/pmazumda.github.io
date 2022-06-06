@@ -9,6 +9,7 @@ sitemap:
   changefreq: 'monthly'
   exclude: 'no'
 tags: Docker
+readtime: true
 
 ---
 ### I want to change the default directory in docker.. 
