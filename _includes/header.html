@@ -37,7 +37,6 @@
 		  
 		  {% if include.type == "post" %}
 		  <span class="post-meta">Posted on {{ page.date | date: site.date_format }}</span>
-		  <span class="post-meta">{% include readtime.html %}</span>	  
           {% if page.last-updated %}
               <span class="post-meta">
                 <span class="d-none d-md-inline middot">&middot;</span>
@@ -45,7 +44,10 @@
               </span>
             {% endif %}
             {% if page.readtime %}
-              {% include readtime.html %}
+			  <span class="post-meta">
+			   <span class="d-none d-md-inline middot">&middot;</span>
+               {% include readtime.html %}
+			  </span>
             {% endif %}
 		  {% endif %}
         </div>
