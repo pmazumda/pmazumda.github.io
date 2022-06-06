@@ -43,7 +43,9 @@
                 Last updated {{ page.last-updated | date: date_format }}
               </span>
            {% endif %}
-            
+           {% if page.readtime %}
+              {% include readtime.html %}
+           {% endif %} 
 		  {% endif %}
         </div>
       </div>
@@ -74,6 +76,9 @@
                 <span class="d-none d-md-inline middot">&middot;</span>
                 Last updated {{ page.last-updated | date: date_format }}
               </span>
+            {% endif %}
+			{% if page.readtime %}
+              {% include readtime.html %}
             {% endif %}
             
 		  {% endif %}
