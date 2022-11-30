@@ -1,4 +1,4 @@
-name: Post push
+name: Post Push
 
 on:
   pull_request:
