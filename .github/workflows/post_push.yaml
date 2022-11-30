@@ -12,17 +12,17 @@ jobs:
       uses: jitterbit/get-changed-files@v1
     - id: posts
       name: Detecting posts from the changes
-        run: |
-          i=0
-          for changed_file in ${{ steps.files.outputs.added_modified }}; do
-            echo "Do something with ${changed_file}."
-            if [[ "${changed_file}" == "./_posts"* ]];
-            then
-              echo "File ${changed_file} matched post."
-              echo "::set-output name=post${i}::${changed_file}"
-              ((i=i+1))
-            fi
-          done
+      run: |
+        i=0
+        for changed_file in ${{ steps.files.outputs.added_modified }}; do
+          echo "Do something with ${changed_file}."
+          if [[ "${changed_file}" == "./_posts"* ]];
+          then
+            echo "File ${changed_file} matched post."
+            echo "::set-output name=post${i}::${changed_file}"
+            ((i=i+1))
+          fi
+        done
     - if: steps.posts.outputs.post0
       name: Publish to medium
       uses: infraway/post-medium-action@v1.5.0
