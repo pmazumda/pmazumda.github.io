@@ -16,18 +16,16 @@ jobs:
         i=0
         for changed_file in ${{ steps.files.outputs.added_modified }}; do
           echo "i am in `pwd`"
-          echo "`ls -lrt`"
+          echo "`cat ${changed_file}`"
+          
           echo "Do something with ${changed_file}."
-          if [[ "${changed_file}" == "./content/posts"* ]];
+          if [[ "${changed_file}" == "content/posts/"* ]];
           then
             echo "File ${changed_file} matched post."
             echo "::set-output name=post${i}::${changed_file}"
             ((i=i+1))
           fi
         done
-    - name: Read the post
-      id: post
-      run: echo "::set-output name=post::$(cat ./content/posts/2022-05-30-Deploying-Rancher-in-quick-start-mode.md)"
     - if: steps.posts.outputs.post0
       name: Publish to medium
       uses: infraway/post-medium-action@main
