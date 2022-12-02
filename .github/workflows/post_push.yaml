@@ -25,6 +25,9 @@ jobs:
             ((i=i+1))
           fi
         done
+    - name: Read the post
+      id: post
+      run: echo "::set-output name=post::$(cat ./content/posts/changed_file)"
     - if: steps.posts.outputs.post0
       name: Publish to medium
       uses: infraway/post-medium-action@main
