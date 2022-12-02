@@ -18,7 +18,7 @@ jobs:
           echo "i am in `pwd`"
           echo "`ls -lrt`"
           echo "Do something with ${changed_file}."
-          if [[ "${changed_file}" == "content/posts"* ]];
+          if [[ "${changed_file}" == "./content/posts"* ]];
           then
             echo "File ${changed_file} matched post."
             echo "::set-output name=post${i}::${changed_file}"
@@ -27,7 +27,7 @@ jobs:
         done
     - name: Read the post
       id: post
-      run: echo "::set-output name=post::$(cat ./content/posts/changed_file)"
+      run: echo "::set-output name=post::$(cat ./content/posts/2022-05-30-Deploying-Rancher-in-quick-start-mode.md)"
     - if: steps.posts.outputs.post0
       name: Publish to medium
       uses: infraway/post-medium-action@main
