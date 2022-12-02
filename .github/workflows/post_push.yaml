@@ -18,7 +18,7 @@ jobs:
           echo "i am in `pwd`"
           echo "`ls -lrt`"
           echo "Do something with ${changed_file}."
-          if [[ "${changed_file}" == "_posts/"* ]];
+          if [[ "${changed_file}" == "content/posts"* ]];
           then
             echo "File ${changed_file} matched post."
             echo "::set-output name=post${i}::${changed_file}"
