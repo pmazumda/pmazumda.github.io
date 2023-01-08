@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bootstrapping a RKE ( Rancher Kubernetes Engine ) 
+title: Bootstrapping a Rancher Kubernetes Engine Cluster 
 date: '2022-11-30T18:47:00.000+05:30'
 author: Middlewarebytes
 sitemap:
@@ -19,11 +19,14 @@ readtime: true
 ---
 
 
+
+
+<p>Rancher is a software stack which helps in kubernetes cluster management by providing a centralized authentication, access control and observability platform, it streamlines cluster deployment on baremetal, private or public clouds.<br>
+Rancher can be installed on any k8s cluster, be it AKS, EKS, GKE etc but for this we  have used RKE which is Rancher's own distibution of its kubernetes engine also called Rancher Kubernetes Engine.<br>
+For detailed instructions on how to setup a RKE cluster, **[refer]**(https://docs.ranchermanager.rancher.io/how-to-guides/new-user-guides/kubernetes-cluster-setup/rke1-for-rancher)
+At first glance, the document may seem overwhelming but trust me the documentation is excellent and in no time, you will have a cluster  Up and Running :) </p>
+
 # Install/Upgrade Rancher on a Kubernetes Cluster.
-
-Rancher is a software stack which helps in kubernetes cluster management by providing a centralized authentication, access control and observability platform, it streamlines cluster deployment on baremetal, private or public clouds. Refer  the doc for a  brief overview on how to deploy rancher, create a cluster and deploy applications on it. Rancher can be installed on any k8s cluster, be it AKS, EKS, GKE etc but for this we  have used RKE which is Rancher's own distibution of its kubernetes engine also called Rancher Kubernetes Engine.
-
-For detailed instructions on how to setup a RKE cluster, refer here: https://docs.ranchermanager.rancher.io/how-to-guides/new-user-guides/kubernetes-cluster-setup/rke1-for-rancher
 
 ## Pre-requisites:
 
@@ -31,19 +34,15 @@ For detailed instructions on how to setup a RKE cluster, refer here: https://doc
 2. A workstation with necessary CLI Tools and binaries installed, probably your laptop. 
 3. A machine with SSH access keys - where we  would bootstrap our rke cluster.
 
-
 ## Overview
 
-* Prepare your machine ( VM/ baremetal)
-  * Install docker- Pay attention to the docker version needed for kubernetes)
-    Check the [official](https://docs.docker.com/engine/install/) documentation on how to install docker.
-* CLI Tools 
-
-    The following CLI tools are required for setting up the Kubernetes cluster. Please make sure these tools are installed and available in your $PATH.
-    
-    - kubectl - Kubernetes command-line tool.
-    - helm - Package management for Kubernetes. Refer to the Helm version requirements to choose a version of Helm to install Rancher. Refer to the instructions provided by the Helm project for your specific platform.
-* Prepare SSH keys
+- Prepare your machine (VM/ baremetal)
+  - Install docker - Pay attention to the docker version needed for kubernetes)
+  - Check the [official](https://docs.docker.com/engine/install/) documentation on how to install docker.
+- CLI Tools - The following CLI tools are required for setting up the Kubernetes cluster.Please make sure these tools are installed and available in your $PATH.
+  - kubectl - Kubernetes command-line tool.
+  - helm - Package management for Kubernetes. Refer to the Helm version requirements to choose a version of Helm to install Rancher. Refer to the instructions provided by the Helm project for your specific platform.
+- Prepare SSH keys
 
 
 ## Install Rancher using the HELM CHART
@@ -87,7 +86,7 @@ kubectl -n cattle-system create secret tls tls-rancher-ingress \
   --key=tls.key
   ```
 
-The command to install Rancher requires a domain name that forwards traffic to Rancher. If you are using the Helm CLI to set up a proof-of-concept, you can use a fake domain name when passing the hostname option. An example of a fake domain name would be <IP_OF_LINUX_NODE>.sslip.io, which would expose Rancher on an IP where it is running. Production installs would require a real domain name.
+The command to install Rancher requires a domain name that forwards traffic to Rancher. If you are using the Helm CLI to set up a proof-of-concept, you can use a fake domain name when passing the hostname option. An example of a fake domain name would be <IP_OF_LINUX_NODE>.sslip.io, which would expose Rancher on an IP where it is running. Production installations are recommended to use a real domain name.
 
 ```bash
 helm install rancher rancher-<CHART_REPO>/rancher \
@@ -97,17 +96,16 @@ helm install rancher rancher-<CHART_REPO>/rancher \
   --set ingress.tls.source=secret
   ```
 
-Refer: https://docs.ranchermanager.rancher.io/pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster
+Original documentation if in case you want to [refer](https://docs.ranchermanager.rancher.io/pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster)
 
 
-Alternatively, we  have prepared a terraform file which can be also used to setup  the infrastructure. All of the above steps will be performed using terraform.
-
-First, you want to make sure that you have the Terraform CLI installed on your machine and prepare the VM's/ machines where you are gonna bring up your cluster. You can find the documentation on the [Terraform docs](https://learn.hashicorp.com/tutorials/terraform/in)
+<p>**Now here comes the fun part**, if you are working with infrastructure as code tools like ansible or terraform  then the whole of the above process can be automated, do basically you can automate the  provisioning of your infrastructure as well as deployment of your applications through that.<br>
+I have prepared a terraform file which can be also used to setup  the infrastructure. All of the above steps will be performed using terraform.<br>
+Firstly, you want to make sure that you have the Terraform CLI installed on your machine and prepare the VM's/ machines where you are gonna bring up your cluster. You can find the documentation on the [Terraform docs](https://learn.hashicorp.com/tutorials/terraform/in)
 
 ## Creating RKE cluster using Terraform and deploy Rancher into it. 
 
 Checkout the following repo which contains the source code.Please bear in mind that if you are going to use it , you need to replace the environment specific variables.
-
 
 The repository contains two folder structures, the terraform files present here  is responsible for bootstrapping the  RKE k8s cluster. 
 Modify the variables.tf as per your needs. A working cluster.yml is  provided as an example, if you want to provide more options you can also have a look at this file.
@@ -146,11 +144,11 @@ Encountered Issues
 1. Failed running cluster err:[workerPlane] Failed to bring up Worker Plane: [Failed to verify healthcheck: Failed to ch]: Get "http://localhost:10248/healthz": Unable to access the service on localhost:10248. The service might be still st: failed to run Kubelet: unable to determine runtime API version: rpc error: code = Unavailable desc = connection error
 
 
-Problem:
+**Problem:**
 
 As of Kubernetes 1.24, dockershim is no longer part of the Kubernetes core so essentially it isnt really RKE that is causing this but chnage in Kubernetes 1.24 which causing this.
 
-Solution:
+**Solution:**
 
 If your cluster is using Docker Engine with dockershim as its container runtime, one option is to manually install cri-dockerd and migrate your nodes to stop using dockershim and start using cri-dockerd. 
 Install cri-dockerd
@@ -304,9 +302,12 @@ $ kubectl uncordon <NODE>
 
 
 2. Docker daemon stopped , cannot bring up with the following error
+ 
+ **Problem:**
+ 
  Cannot connect to the Docker daemon at unix:/var/run/docker.sock. Is the docker daemon running?
  
- Solution:
+ **Solution:**
  
  Stopped any stale processes running :
  ```bash
@@ -317,6 +318,5 @@ $ kubectl uncordon <NODE>
     sudo systemctl start docker
 	```
 	
-	
-	> If at first you don't succeed , try try again!!
-											~ Sampong Philip 
+>*If at first you don't succeed , try try again!!*
+>    *~ Sampong Philip*

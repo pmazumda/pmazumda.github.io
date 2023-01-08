@@ -13,7 +13,6 @@ tags:
 - Docker
 - Prometheus
 - Grafana
-- New technology
 - Cloud native
 - Harbor
 readtime: true
@@ -281,8 +280,6 @@ scrape_configs:
       static_configs:
         - targets: ['<harbor_instance>:<metrics_port>']
 ```
-
-
 
 Once  you have configured Prometheus server to collect Harbor metrics,  you can use Grafana to visualize the data.
 I have created a simple dashboard  for visalization some key Harbor metrics, you can download the  json file  of dashboard from this github repository and build on top of it. Feel free to create a PR on this repository so that others can benefit too :)
