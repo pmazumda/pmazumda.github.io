@@ -99,17 +99,16 @@ helm install rancher rancher-<CHART_REPO>/rancher \
   --set ingress.tls.source=secret
   ```
 
-Original [documentation]((https://docs.ranchermanager.rancher.io/pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster) if in case you want to refer.
+Original [documentation](https://docs.ranchermanager.rancher.io/pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster) if in case you want to refer.
 
 
 **_Now here comes the fun part_**
 
 <p>If you are working with infrastructure as code tools like ansible or terraform  then the whole of the above process can be automated, do basically you can automate the  provisioning of your infrastructure as well as deployment of your applications through that.<br>
 
-I have prepared a terraform file which can be also used to setup  the infrastructure. All of the above steps will be performed using terraform.<br>
+<p>I have prepared a terraform file which can be also used to setup  the infrastructure. All of the above steps will be performed using terraform.<br>
 
-Firstly, you want to make sure that you have the Terraform CLI installed on your machine and prepare the VM's/ machines where you are gonna bring up your cluster. You can find the documentation on the [Terraform docs](https://learn.hashicorp.com/tutorials/terraform/in)
-</p>
+<p>Firstly, you want to make sure that you have the Terraform CLI installed on your machine and prepare the VM's/ machines where you are gonna bring up your cluster. You can find the documentation on the [Terraform docs](https://learn.hashicorp.com/tutorials/terraform/in)</p>
 
 
 ## Creating RKE cluster using Terraform and deploy Rancher into it. 
