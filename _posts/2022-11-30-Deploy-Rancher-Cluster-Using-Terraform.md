@@ -22,9 +22,12 @@ readtime: true
 
 
 <p>Rancher is a software stack which helps in kubernetes cluster management by providing a centralized authentication, access control and observability platform, it streamlines cluster deployment on baremetal, private or public clouds.<br>
+
 Rancher can be installed on any k8s cluster, be it AKS, EKS, GKE etc but for this we  have used RKE which is Rancher's own distibution of its kubernetes engine also called Rancher Kubernetes Engine.<br>
-For detailed instructions on how to setup a RKE cluster, **[refer]**(https://docs.ranchermanager.rancher.io/how-to-guides/new-user-guides/kubernetes-cluster-setup/rke1-for-rancher)
-At first glance, the document may seem overwhelming but trust me the documentation is excellent and in no time, you will have a cluster  Up and Running :) </p>
+
+For detailed instructions on how to setup a RKE cluster, [refer](https://docs.ranchermanager.rancher.io/how-to-guides/new-user-guides/kubernetes-cluster-setup/rke1-for-rancher)
+At first glance, the document may seem overwhelming but trust me the documentation is excellent and in no time, you will have a cluster  Up and Running :)
+</p>
 
 # Install/Upgrade Rancher on a Kubernetes Cluster.
 
@@ -47,7 +50,7 @@ At first glance, the document may seem overwhelming but trust me the documentati
 
 ## Install Rancher using the HELM CHART
 
-Rancher is installed using the Helm package manager for Kubernetes, Refer to the Helm version[https://docs.ranchermanager.rancher.io/getting-started/installation-and-upgrade/resources/helm-version-requirements] requirements to choose a version of Helm to install Rancher.
+Rancher is installed using the Helm package manager for Kubernetes, Refer to the [Helm version](https://docs.ranchermanager.rancher.io/getting-started/installation-and-upgrade/resources/helm-version-requirements) requirements to choose a version of Helm to install Rancher.
 
 Rancher is available from three different repositories, we use the stable repository to fetch stable versions of rancher images. This is recommended for production environments.
 
@@ -96,12 +99,18 @@ helm install rancher rancher-<CHART_REPO>/rancher \
   --set ingress.tls.source=secret
   ```
 
-Original documentation if in case you want to [refer](https://docs.ranchermanager.rancher.io/pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster)
+Original [documentation]((https://docs.ranchermanager.rancher.io/pages-for-subheaders/install-upgrade-on-a-kubernetes-cluster) if in case you want to refer.
 
 
-<p>**Now here comes the fun part**, if you are working with infrastructure as code tools like ansible or terraform  then the whole of the above process can be automated, do basically you can automate the  provisioning of your infrastructure as well as deployment of your applications through that.<br>
+**_Now here comes the fun part_**
+
+<p>If you are working with infrastructure as code tools like ansible or terraform  then the whole of the above process can be automated, do basically you can automate the  provisioning of your infrastructure as well as deployment of your applications through that.<br>
+
 I have prepared a terraform file which can be also used to setup  the infrastructure. All of the above steps will be performed using terraform.<br>
+
 Firstly, you want to make sure that you have the Terraform CLI installed on your machine and prepare the VM's/ machines where you are gonna bring up your cluster. You can find the documentation on the [Terraform docs](https://learn.hashicorp.com/tutorials/terraform/in)
+</p>
+
 
 ## Creating RKE cluster using Terraform and deploy Rancher into it. 
 
@@ -141,7 +150,7 @@ Encountered Issues
 
 ### The following issues were encountered during the setup of the rke cluster.
 
-1. Failed running cluster err:[workerPlane] Failed to bring up Worker Plane: [Failed to verify healthcheck: Failed to ch]: Get "http://localhost:10248/healthz": Unable to access the service on localhost:10248. The service might be still st: failed to run Kubelet: unable to determine runtime API version: rpc error: code = Unavailable desc = connection error
+* Failed running cluster err:[workerPlane] Failed to bring up Worker Plane: [Failed to verify healthcheck: Failed to ch]: Get "http://localhost:10248/healthz": Unable to access the service on localhost:10248. The service might be still st: failed to run Kubelet: unable to determine runtime API version: rpc error: code = Unavailable desc = connection error
 
 
 **Problem:**
@@ -301,7 +310,7 @@ $ kubectl uncordon <NODE>
 [Reference](https://www.mirantis.com/blog/how-to-install-cri-dockerd-and-migrate-nodes-from-dockershim/){:target="_blank"}
 
 
-2. Docker daemon stopped , cannot bring up with the following error
+* Docker daemon stopped , cannot bring up with the following error
  
  **Problem:**
  
