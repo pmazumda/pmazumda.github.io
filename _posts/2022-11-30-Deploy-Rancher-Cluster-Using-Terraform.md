@@ -21,13 +21,13 @@ readtime: true
 
 
 
-<p>Rancher is a software stack which helps in kubernetes cluster management by providing a centralized authentication, access control and observability platform, it streamlines cluster deployment on baremetal, private or public clouds.<br>
+Rancher is a software stack which helps in kubernetes cluster management by providing a centralized authentication, access control and observability platform, it streamlines cluster deployment on baremetal, private or public clouds.
 
-Rancher can be installed on any k8s cluster, be it AKS, EKS, GKE etc but for this we  have used RKE which is Rancher's own distibution of its kubernetes engine also called Rancher Kubernetes Engine.<br>
+Rancher can be installed on any k8s cluster, be it AKS, EKS, GKE etc but for this we  have used RKE which is Rancher's own distibution of its kubernetes engine also called Rancher Kubernetes Engine.
 
-For detailed instructions on how to setup a RKE cluster, [refer](https://docs.ranchermanager.rancher.io/how-to-guides/new-user-guides/kubernetes-cluster-setup/rke1-for-rancher)
+For detailed instructions on how to setup a RKE cluster [refer](https://docs.ranchermanager.rancher.io/how-to-guides/new-user-guides/kubernetes-cluster-setup/rke1-for-rancher)
 At first glance, the document may seem overwhelming but trust me the documentation is excellent and in no time, you will have a cluster  Up and Running :)
-</p>
+
 
 # Install/Upgrade Rancher on a Kubernetes Cluster.
 
@@ -40,11 +40,15 @@ At first glance, the document may seem overwhelming but trust me the documentati
 ## Overview
 
 - Prepare your machine (VM/ baremetal)
+
   - Install docker - Pay attention to the docker version needed for kubernetes)
   - Check the [official](https://docs.docker.com/engine/install/) documentation on how to install docker.
+
 - CLI Tools - The following CLI tools are required for setting up the Kubernetes cluster.Please make sure these tools are installed and available in your $PATH.
+
   - kubectl - Kubernetes command-line tool.
   - helm - Package management for Kubernetes. Refer to the Helm version requirements to choose a version of Helm to install Rancher. Refer to the instructions provided by the Helm project for your specific platform.
+
 - Prepare SSH keys
 
 
@@ -76,8 +80,10 @@ Once you've added the repo you can search it to show available versions with the
 
 ### Choose your SSL Configuration
 
-The Rancher management server is designed to be secure by default and requires SSL/TLS configuration.
-We used  the option to use our own certificates.This option allows you to bring your own public- or private-CA signed certificate. Rancher will use that certificate to secure websocket and HTTPS traffic. In this case, you must upload this certificate (and associated key) as PEM-encoded files with the name tls.crt and tls.key. If you are using a private CA, you must also upload that certificate. This is due to the fact that this private CA may not be trusted by your nodes. Rancher will take that CA certificate, and generate a checksum from it, which the various Rancher components will use to validate their connection to Rancher.
+The Rancher management server is designed to be secure by default and requires **SSL/TLS** configuration.
+We used the option to use our own certificates.This option allows you to bring your own public or private-CA signed certificate. Rancher will use that certificate to secure websocket and HTTPS traffic. In this case, you must upload this certificate (and associated key) as PEM-encoded files with the name tls.crt and tls.key. 
+
+If you are using a private CA, you must also upload that certificate. This is due to the fact that this private CA may not be trusted by your nodes. Rancher will take that CA certificate, and generate a checksum from it, which the various Rancher components will use to validate their connection to Rancher.
 
 Please note to combine the server certificate followed by any intermediate certificate(s) needed into a file named tls.crt. Copy your certificate key into a file named tls.key.
 
@@ -89,7 +95,7 @@ kubectl -n cattle-system create secret tls tls-rancher-ingress \
   --key=tls.key
   ```
 
-The command to install Rancher requires a domain name that forwards traffic to Rancher. If you are using the Helm CLI to set up a proof-of-concept, you can use a fake domain name when passing the hostname option. An example of a fake domain name would be <IP_OF_LINUX_NODE>.sslip.io, which would expose Rancher on an IP where it is running. Production installations are recommended to use a real domain name.
+The command to install Rancher requires a domain name that forwards traffic to Rancher. If you are using the Helm CLI to set up a proof-of-concept, you can use a fake domain name when passing the hostname option. An example of a fake domain name would be **IP_OF_LINUX_NODE.sslip.io**, which would expose Rancher on an IP where it is running. Production installations are recommended to use a real domain name.
 
 ```bash
 helm install rancher rancher-<CHART_REPO>/rancher \
@@ -104,11 +110,11 @@ Original [documentation](https://docs.ranchermanager.rancher.io/pages-for-subhea
 
 **_Now here comes the fun part_**
 
-<p>If you are working with infrastructure as code tools like ansible or terraform  then the whole of the above process can be automated, do basically you can automate the  provisioning of your infrastructure as well as deployment of your applications through that.<br>
+If you are working with infrastructure as code tools like ansible or terraform  then the whole of the above process can be automated, do basically you can automate the  provisioning of your infrastructure as well as deployment of your applications through that.
 
-<p>I have prepared a terraform file which can be also used to setup  the infrastructure. All of the above steps will be performed using terraform.<br>
+I have prepared a terraform file which can be also used to setup  the infrastructure. All of the above steps will be performed using terraform.
 
-<p>Firstly, you want to make sure that you have the Terraform CLI installed on your machine and prepare the VM's/ machines where you are gonna bring up your cluster. You can find the documentation on the [Terraform docs](https://learn.hashicorp.com/tutorials/terraform/in)</p>
+Firstly, you want to make sure that you have the Terraform CLI installed on your machine and prepare the VM's/ machines where you are gonna bring up your cluster. You can find the documentation on the [Terraform docs](https://learn.hashicorp.com/tutorials/terraform/in)
 
 
 ## Creating RKE cluster using Terraform and deploy Rancher into it. 
@@ -255,16 +261,18 @@ Cordon and drain dockershim-dependent nodes
 Now we’re going to cordon our node, which does exactly what it sounds like: we’re putting up warning tape around this node and telling the rest of the system not to schedule new pods here. 
 
 ```bash
-$ kubectl cordon <NODE>
+$ kubectl cordon NODE
 ```
 
-…where <NODE> is the name of the node in question (without the angle brackets). 
+
 
 Next we’re going to drain the node, which means that we will safely and methodically kick out any currently running pods. 
 
 ```bash
-$ kubectl drain <NODE> --ignore-daemonsets
+$ kubectl drain NODE --ignore-daemonsets
 ```
+
+Where **NODE** is the name of the node in question (without the angle brackets). 
 
 With our node cordoned and drained, we can move on to configure the node to use cri-dockerd. 
 
@@ -284,7 +292,7 @@ Save the file. Next, we’ll need to update the Node object in the control plane
 $ KUBECONFIG=/path/to/admin.conf kubectl edit no <NODE>
 ```
 
-Again, <NODE> is the name of the node in question (without the angle brackets). Replace the file directory path with the appropriate path on your system, leading to the admin.conf configuration file.
+Again, **NODE** is the name of the node in question (without the angle brackets). Replace the file directory path with the appropriate path on your system, leading to the admin.conf configuration file.
 
 Within the file, modify kubeadm.alpha.kubernetes.io/cri-socket from /var/run/dockershim.sock to unix:///var/run/cri-dockerd.sock.
 
@@ -297,13 +305,13 @@ $ systemctl restart kubelet
 Verify that the node is using the correct adapter by running:
 
 ```bash
-$ kubectl describe <NODE>
+$ kubectl describe NODE
 ```
 
 Under the annotations section, you should see a value specifying that the node uses cri-dockerd.sock. Now uncordon the node, and you’re done!
 
 ```bash
-$ kubectl uncordon <NODE>
+$ kubectl uncordon NODE
 ```
 
 [Reference](https://www.mirantis.com/blog/how-to-install-cri-dockerd-and-migrate-nodes-from-dockershim/){:target="_blank"}
