@@ -38,7 +38,7 @@ or
 > `sudo service docker status`
 
 
-### What next ?
+### What next ??
 
 Next, we need to edit the service startup script to include our changes. The location of the service startup script can be found by running:
 
