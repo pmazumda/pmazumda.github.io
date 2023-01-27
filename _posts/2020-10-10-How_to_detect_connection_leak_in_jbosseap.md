@@ -14,7 +14,6 @@ tags:
 - Jboss EAP
 - connection leak
 - datasource
-- oracle
 ---
 
 Have you came accross issues with your application which is deployed in Jboss EAP trying to find answers for the following questions.
