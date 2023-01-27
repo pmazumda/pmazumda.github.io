@@ -1,6 +1,17 @@
 name: Post Push
 
 on:
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning' 
+        type: choice
+        options:
+        - info
+        - warning
+        - debug 
   push:
     branches: [ master ]
 
@@ -16,7 +27,7 @@ jobs:
         i=0
         for changed_file in ${{ steps.files.outputs.added_modified }}; do
           echo "i am in `pwd`"
-          echo "`cat ${changed_file}`"
+          echo "`cat ../${changed_file}`"
           
           echo "Do something with ${changed_file}."
           if [[ "${changed_file}" == "content/posts/"* ]];
@@ -28,7 +39,7 @@ jobs:
         done
     - if: steps.posts.outputs.post0
       name: Publish to medium
-      uses: infraway/post-medium-action@main
+      uses: infraway/post-medium-action@v1.6.0
       with:
         access_token: ${{ secrets.MEDIUM_ACCESS_TOKEN }}
         markdown_file: ${{ steps.posts.outputs.post0 }}
