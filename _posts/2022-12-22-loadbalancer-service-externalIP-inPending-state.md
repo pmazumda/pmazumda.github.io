@@ -24,10 +24,10 @@ Many a times while we see the external IP for a service as type LoadBalancer in 
 
 ![Events](/img/postimages/troubleshootingloadbalancerservicecreation-1.png?raw=true "Events")
 
-This is because the cluster identity or the service principal for the AKS cluster does not have access to the resources which it is trying to look for in the resource group.In this case the service principal for the subjected cluster does not have access to read the vnet resources (subnet) under the **resource group virtualnetworks-><VNET>/subnets/<SUBNETNAME>**. 
+This is because the cluster identity or the service principal for the AKS cluster does not have access to the resources which it is trying to look for in the resource group.In this case the service principal for the subjected cluster does not have access to read the vnet resources (subnet) under the **resource group virtualnetworks** **Your VNET/subnets/SUBNETNAME**. 
 
 
-To validate, follow the below steps :point_down:
+To validate, follow the below steps -> 
 
 Go to the **Azure Portal** -> **Kubernetes Services**
 Click on its Resource Group.
