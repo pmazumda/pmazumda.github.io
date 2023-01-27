@@ -20,12 +20,14 @@ blogger_orig_url: https://middlewarebytes.blogspot.com/2020/01/de-clutter-your-c
 
 <div dir="ltr" style="text-align: left;" trbidi="on">Is your computer filled with downloaded files&nbsp; that sometimes you take hours, if not minutes to search through a specific file which&nbsp; you need to send some - one has asked for.<br /><div><br /></div><div>I tend to download a lot of tutorials, pdfs, libraries , executable , zips etc for my work and&nbsp; someday when I go thorough my&nbsp; system, I even don't remember which files are kept where. It feels great to&nbsp; have a clean&nbsp; organized computer with all the files sorted based on their extension but it is not easy and requires a lot of discipline and patience :)&nbsp; At least for me as you can see the before and after&nbsp; situation of running this program.&nbsp;</div><div><br /></div><div>There are&nbsp; tools and software ( both paid and the free ones, some are trial version which puts limit on the number of&nbsp; files that can be sorted :) available in the market but I am not looking for those, hence I have created this simple python program to de-clutter your box and sort files based on the extension.&nbsp;</div><div><br /></div><div>This requires Python to run, so you need to install python in your machine first in order to execute this.&nbsp; I am still working on a executable version of&nbsp; this program so&nbsp; you need not install python but that's still work in progress and I will definitely put&nbsp; up a link to the program once it is ready.</div><div>For the time being ,&nbsp; if you&nbsp; want to use this program, you can download&nbsp; Python from&nbsp; the official site&nbsp;&nbsp;<a href="https://www.python.org/downloads/" target="_blank">Here</a>&nbsp;.</div><div><br /></div><div><br /></div><div><div><span style="white-space: pre;">      </span>&nbsp;
 
+```
 ## Declutter Program
-```###############################################################################
-   ##This program needs python to be installed on your computer in order to run ##          
-   ##Modified Date: 10.01.2020                                                  ##
-   ##File name : declutter.py                                                   ##
-   ##Usage: py declutter.py                                                     ## ###############################################################################
+###############################################################################
+##This program needs python to be installed on your computer in order to run ##          
+##Modified Date: 10.01.2020                                                  ##
+##File name : declutter.py                                                   ##
+##Usage: py declutter.py                                                     ## 
+###############################################################################
    
 
    ##   Import the important libraries required to perform the task 
@@ -63,4 +65,4 @@ blogger_orig_url: https://middlewarebytes.blogspot.com/2020/01/de-clutter-your-c
 	     else:
 		   os.makedirs(path+'/'+ext)
 		   shutil.move(path+'/'+file_, path+'/'+ext+'/'+file_)
-```
+       ```
