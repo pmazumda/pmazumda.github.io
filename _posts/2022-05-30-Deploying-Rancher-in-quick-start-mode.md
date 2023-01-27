@@ -28,7 +28,7 @@ By now I think most of us would have heard already heard about  Kubernetes and i
 Nowdays, it is not unusual for a company to run a handful of k8s clusters with each cluster having special configuration and access-control settings, sometimes these clusters hosted on different cloud stacks or datacenters, Rancher can effectively manage all such k8s clusters acting as a single pan of glass for sorts of administration and management activities. 
 
 With its management UI, users can make broad changes to a cluster or a group of clusters from a central location.
-In my team as well, while doing a POC about  self-managed K8s cluster and its manageability, Rancher sat perfectly well on all our checkboxes 😆
+In my team as well, while doing a POC about  self-managed K8s cluster and its manageability, Rancher sat perfectly well on all our checkboxes. 😆
 What I just mentioned is just the beginning, Rancher has much more to offer. Checkout the official documentation for more detailed information.
 
 Here , I will only install Rancher in a quick start mode which is  helpful  if you  are trying out Rancher for the first time but note that this method of installing Rancher is just for test or demo purposes only. If you are planning to use Rancher for development or production uses ,go and see the appropriate topologies for installation. I am also not  going to create or import a k8s cluster here, I will leave that for later.
