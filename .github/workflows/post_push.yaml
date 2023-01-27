@@ -19,10 +19,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - id: files
+    - name: Get changed files
+      id: files
       uses: jitterbit/get-changed-files@v1
-    - id: posts
-      name: Detecting posts from the changes
+    - name: checkout repo
+      id: checkout
+      uses: actions/checkout@v3.2.0
+    - name: Detecting posts from the changes
+      id: posts
       run: |
         i=0
         for changed_file in ${{ steps.files.outputs.added_modified }}; do
