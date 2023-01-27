@@ -37,7 +37,7 @@ The source code of HAProxy which is covered under GPL v2 licence can be download
 
 #### Configuration
 
-The primary and the default configuration file for HAProxy is /etc/haproxy/haproxy.cfg, which is created automatically during installation. This file defines a standard setup without any load balancing, following is a template for the haproxy.cfg with default configurations. The 
+The primary and the defaulfft configuration file for HAProxy is /etc/haproxy/haproxy.cfg, which is created automatically during installation. This file defines a standard setup without any load balancing, following is a template for the haproxy.cfg with default configurations. The 
 
 
     ```

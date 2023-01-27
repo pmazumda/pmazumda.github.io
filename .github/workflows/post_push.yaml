@@ -36,7 +36,7 @@ jobs:
           if [[ "${changed_file}" == "_posts/"* ]];
           then
             echo "File ${changed_file} matched post."
-            echo "{post${i}}={changed_file}" >> $GITHUB_OUTPUT
+            echo "post${i}=${changed_file}" >> $GITHUB_OUTPUT
             ((i=i+1))
           fi
         done
