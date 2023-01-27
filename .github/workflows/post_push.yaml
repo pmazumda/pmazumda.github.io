@@ -31,7 +31,8 @@ jobs:
         i=0
         for changed_file in ${{ steps.files.outputs.added_modified }}; do
           echo "i am in `pwd`"
-          cd  _posts        
+          cd  _posts
+          echo "`ls -lrt`"
           echo "Do something with ${changed_file}."
           if [[ "${changed_file}" == "_posts/"* ]];
           then
