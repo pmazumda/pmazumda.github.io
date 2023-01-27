@@ -27,6 +27,7 @@ jobs:
         i=0
         for changed_file in ${{ steps.files.outputs.added_modified }}; do
           echo "i am in `pwd`"
+          echo "`ls -lrt`"
           echo "`cat ${changed_file}`"
           
           echo "Do something with ${changed_file}."
