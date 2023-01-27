@@ -22,8 +22,7 @@ Have you came accross issues with your application which is deployed in Jboss EA
 
  - How can I identify code which leaks datasource connections ??
 
-
-if the server log contains error messages with error codes  **IJ000453** , **IJ000655** it means that there is a connection leak at the code, this can give rise to problems such as application not able to fetch any free connections  from the pool whereas the **INACTIVE** connections in the database keeps increasing.
+If the server log contains error messages with error codes  **IJ000453** , **IJ000655** it means that there is a connection leak at the code, this can give rise to problems such as application not able to fetch any free connections  from the pool whereas the **INACTIVE** connections in the database keeps increasing.
 
 
 ### Resolution
@@ -34,7 +33,7 @@ You can follow the below steps on how to  enable this:
 
     Enable the CCM for the datasource. It defaults to **true** if it is not explicitly specified but you may set **use-ccm="true"** explicitly.
     
-
+```xml
 	<subsystem xmlns="urn:jboss:domain:datasources:1.1">
        <datasources>
           <datasource ... enabled="true" use-ccm="true">
@@ -42,7 +41,7 @@ You can follow the below steps on how to  enable this:
           </datasource>
        </datasources>
     </subsystem>
-	
+```
 	
 	Verify that <cached-connection-manager> exists in the jca subsystem and set **debug="true".**
 	
