@@ -31,7 +31,7 @@ jobs:
         i=0
         for changed_file in ${{ steps.files.outputs.added_modified }}; do
           echo "i am in `pwd`"
-          cd  pmazumda.github.io          
+          cd  _posts        
           echo "Do something with ${changed_file}."
           if [[ "${changed_file}" == "_posts/"* ]];
           then
