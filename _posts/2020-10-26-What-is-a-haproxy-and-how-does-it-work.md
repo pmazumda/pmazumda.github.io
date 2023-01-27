@@ -39,7 +39,7 @@ The source code of HAProxy which is covered under GPL v2 licence can be download
 
 The primary and the default configuration file for HAProxy is /etc/haproxy/haproxy.cfg, which is created automatically during installation. This file defines a standard setup without any load balancing, following is a template for the haproxy.cfg with default configurations. The 
 
-
+```console
     global  
         log /dev/log    local0
         log /dev/log    local1 notice
@@ -98,6 +98,7 @@ The primary and the default configuration file for HAProxy is /etc/haproxy/hapro
         stats uri /
         stats hide-version
         stats auth someuser:password
+        ```
 	
 
 #### Explanation:
