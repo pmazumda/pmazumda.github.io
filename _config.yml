@@ -25,7 +25,6 @@ navbar-links:
  ABOUT:
    - ME: "aboutme"
    - THIS SITE: "abouttheblog"
-   - COLLABORATORS: "collaborators"
    
 # --- Google custom search config --- #
 nav-search: "search"
