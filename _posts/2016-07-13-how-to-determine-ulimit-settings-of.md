@@ -1,6 +1,6 @@
 --- 
 layout: post 
-title: How to determine the ulimit settings of a running WebSphere Application Server Process on Linux. 
+title: Determine ulimit settings on Linux. 
 date: '2016-07-13T15:31:00.002+05:30' 
 author: Middlewarebytes
 sitemap:

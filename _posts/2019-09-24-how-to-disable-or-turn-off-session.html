@@ -1,7 +1,6 @@
 ---
 layout: post
-title: How to Disable or turn off the  session replication in JBoss Enterprise Application
-  Server
+title: Disable session replication in JBoss EAP
 date: '2019-09-24T17:19:00.005+05:30'
 author: Middlewarebytes
 sitemap:
@@ -15,8 +14,6 @@ tags:
 - Redhat
 - Session persistence
 modified_time: '2019-09-24T17:22:32.457+05:30'
-blogger_id: tag:blogger.com,1999:blog-1729991490043336487.post-277253826084576717
-blogger_orig_url: https://middlewarebytes.blogspot.com/2019/09/how-to-disable-or-turn-off-session.html
 ---
 
 <div dir="ltr" style="text-align: left;" trbidi="on"><h2 style="text-align: left;"><span style="font-weight: normal;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<u>Disable Session Replication in Jboss EAP</u></span></h2><div><br /></div><div><span style="font-weight: normal;"><u><br /></u></span></div><div><span style="font-weight: normal;">Remove the</span><b> &lt;distributable/&gt;</b><span style="font-weight: normal;"> tag from the application's WEB-INF/web.xml&nbsp;</span></div><div><span style="font-weight: normal;"><u><br /></u></span></div><div><span style="font-weight: normal;">The above&nbsp; steps applies to the following JBoss EAP versions:</span></div><div><span style="font-weight: normal;"><br /></span></div><div><ul style="text-align: left;"><li>4.x</li><li>5.x</li><li>6.x</li><li>7.x</li></ul><div><br /></div></div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Disabling session replication from application, even though Jboss setup is clustered and load balancing is enabled&nbsp; is a valid configuration and entirely depends upon the application requirement.&nbsp;</div><div><br /></div><div><br /></div></div>

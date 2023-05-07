@@ -246,15 +246,29 @@ Some of the key metrics  such as ;
 `harbor_project_total` = Total number of public and private projects
 `harbor_project_quota_usage_byte` = Total used resources of a project
 
-See [here](https://goharbor.io/docs/2.2.0/administration/metrics/#:~:text=Harbor%20metrics%20are%20available%20at%20%3Charbor_instance%3E%3A%3Cmetrics_port%3E%2F%3Cmetrics_path%3E%20based%20on,core%20Metrics%20provided%20by%20the%20docker%20distribution%20itself) for the list of the available Harbor metrics.
+See [this](https://goharbor.io/docs/2.2.0/administration/metrics/#:~:text=Harbor%20metrics%20are%20available%20at%20%3Charbor_instance%3E%3A%3Cmetrics_port%3E%2F%3Cmetrics_path%3E%20based%20on,core%20Metrics%20provided%20by%20the%20docker%20distribution%20itself) for the list of the available Harbor metrics.
 
+We need to set up a prometheus server, we can do that using the prometheus operator which makes the job easier. Please see the original [documentation](https://grafana.com/docs/grafana-cloud/kubernetes-monitoring/other-methods/prometheus/prometheus_operator/) for detailed instructions on installing the operator.
 
-In order to collect harbor metrics using [prometheus](prometheus and grafana documentation) , enable exposing the metrics in the harbor.yml file , in helm chart the same can be done using the 
+In order to collect harbor metrics using prometheus, enable exposing the metrics inside the harbor.yml file , in helm chart the same can be done using the `metrics.enabled` attribute inside the values.yaml file.
 
+Additional metrics related attributes such as below can be also set from the values.yaml.
 
-Set up a prometheus server, set up the prometheus documentation for detailed instructions on installing the prometheus.
+```yaml
+metrics.core.path	#the url path for core metrics	
+metrics.core.port	#the port for core metrics
+metrics.registry.path	#the url path for registry metrics	/metrics
+metrics.registry.port	#the port for registry metrics	8001
+metrics.exporter.path	#the url path for exporter metrics	/metrics
+metrics.exporter.port	#the port for exporter metrics	8001
+metrics.serviceMonitor.enabled	#create prometheus serviceMonitor. Requires prometheus CRD's	false
+metrics.serviceMonitor.additionalLabels	#additional labels to upsert to the manifest	""
+metrics.serviceMonitor.interval	#scrape period for harbor metrics	""
+metrics.serviceMonitor.metricRelabelings	#metrics relabel to add/mod/del before ingestion	[]
+metrics.serviceMonitor.relabelings	#relabels to add/mod/del to sample before scrape
+```
 
-Configure promethes configuration file to scrape harbor metrics. Below is an example scrape config but you can refer the official documentation of Prometheus for more available scrape config options.
+Configure promethes configuration file to scrape harbor metrics. Below is an example scrape config but you can refer the official documentation of Prometheus for more available scrape configuration options.
 
 ```yaml
 scrape_configs:
@@ -283,5 +297,5 @@ scrape_configs:
 
 Once  you have configured Prometheus server to collect Harbor metrics,  you can use Grafana to visualize the data.
 
-I have created a simple dashboard  for visalization some key Harbor metrics, you can download the  json file  of dashboard from this [github repository](https://github.com/pmazumda/cloud-native) and build on top of it. Feel free to create a PR so that others can benefit too. :heart:
+I have created a simple dashboard  for visualizing some key Harbor metrics, you can download the dashboard json file from this [github repository](https://github.com/pmazumda/cloud-native) and build on top of it. Feel free to create a PR if you have interesting suggestions.
 

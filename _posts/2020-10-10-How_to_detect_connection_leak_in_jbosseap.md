@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to identify a connection leak in Jboss Enterprise Application Server(6/7)?
+title: Identify connection leak in Jboss EAP
 date: '2020-10-28T10:47:00.000+05:30'
 author: Middlewarebytes
 sitemap:
