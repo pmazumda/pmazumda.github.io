@@ -80,7 +80,6 @@ kubectl get pods
 ```
 You should see pods related to Trivy Adapter Scanner running.
 
-===
 
  ### Installing Trivy as an Interrogation Service for Harbor
 
