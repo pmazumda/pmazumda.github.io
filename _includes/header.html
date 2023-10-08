@@ -2,6 +2,20 @@
 
 {% if page.bigimg or page.title %}
 
+{% if page.title %}
+  <meta content="{{ page.title }}" property="og:title">
+{% endif %}
+{% if page.subtitle %}
+  <meta content="{{ page.subtitle }}" property="og:description">
+{% endif %}
+{% if page.url %}
+  <meta content="{{ page.url }}" property="og:url">
+{% endif %}
+{% if page.layout %}
+  <meta content="{{ page.layout }}" property="og:type">
+{% endif %}
+
+
 {% if page.bigimg %}
   <div id="header-big-imgs" data-num-img={% if page.bigimg.first %}{{ page.bigimg.size }}{% else %}1{% endif %}
     {% for bigimg in page.bigimg %}
