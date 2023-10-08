@@ -16,6 +16,7 @@ tags:
 - Trivy
 - cloud computing
 readtime: true
+subtitle: A Step-by-Step Guide to Installing Trivy Adapter Scanner on a Kubernetes Cluster
 ---
 
 

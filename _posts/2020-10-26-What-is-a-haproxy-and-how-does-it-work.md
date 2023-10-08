@@ -15,6 +15,7 @@ tags:
 - reverseproxy
 - TCP
 - http
+subtitle: What is a HAProxy and how does it work ?
 
 ---
 

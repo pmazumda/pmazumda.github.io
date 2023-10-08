@@ -9,6 +9,7 @@ sitemap:
   changefreq: 'monthly'
   exclude: 'no'
 tags: Docker
+subtitle: To get the basic information about your Docker configuration, execute
 
 ---
 

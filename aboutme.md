@@ -7,7 +7,7 @@ bigimg:
   - "/img/bgimg/places/oman.jpg" : "The fallen star in Oman"
   - "/img/bgimg/places/oman_trek.jpg" : "The trek to the hidden treasure@Oman"
   - "/img/bgimg/places/colombo.jpg" : "Some moments of solitude@Colombo"
-subtitle: A little more about me!!
+subtitle: A little more about me, my personal and professional life so far!!
 ---
 
 <i class="fa-solid fa-address-card fa-xl"></i>*Hi, My name is Pinak Mazumdar* and I currently live in <i class="fa-solid fa-earth-asia fa-xl"></i> [Bangalore/Bengaluru](https://goo.gl/maps/qsJRuHBYRJ5xRXqZ6){:target="_blank"},India. The Centre of India's high-tech industry and widely regarded as the **Silicon Valley** of India.

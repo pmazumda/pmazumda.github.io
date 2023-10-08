@@ -16,6 +16,7 @@ tags:
 - Cloud native
 - Harbor
 readtime: true
+subtitle: Just like any other parameters in Grafana, persistence too can  be enabled  or disabled on user's choice by activating the parameter which controls
 ---
 
 
