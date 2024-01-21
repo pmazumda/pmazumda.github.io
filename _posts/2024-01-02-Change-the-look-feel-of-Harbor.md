@@ -47,7 +47,7 @@ If you open the file, you'll see the default content is
     }
 	
 	
-###Step 1 
+### Step 1 
 
 
  Change the values of configuration if you want to override the default style to your own. Here are references:
@@ -65,7 +65,7 @@ If you open the file, you'll see the default content is
 Once updated, create a folder called as **customize** and save it under the templates folder of the Harbor helm chart using which you plan to update.
 
 
-###Step2
+### Step2
 
 
 Create a configmap named as harborcustom loading the datatype as setting.json  we created in Step 1.
@@ -73,7 +73,7 @@ Create a configmap named as harborcustom loading the datatype as setting.json  w
     kubectl create configmap  harborcustom --from-file=setting.json=customize/setting.json --namespace <NAMESPACE>
 
 
-###Step3
+### Step3
 
 
 Mount the created configmap in Step2 as a volume inside the pod.
