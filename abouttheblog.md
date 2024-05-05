@@ -18,7 +18,7 @@ I started working on this blog last summer and the idea behind working on this b
 > *In today's environment, hoarding knowledge ultimately erodes your power.If you know something very important, the way to get power is by actually sharing it!*                                                                          
 																		*-Joseph Badaracco*
 
-I mean **yes** we can learn a lot from each other's learnings, experiences, mistakes; nevertheless the problems for which some of us might already  have the solution but not all of us and hence this is it  :blush:
+I mean **yes** we can learn a lot from each other's learnings, experiences, mistakes; nevertheless the problems for which some of us might already  have the solution but not all of us and hence this is it.😃 
 
 It's always good to receive positive and constructive feedback for your work - hence I would be more than happy if you have any suggestions or ideas, so feel free to post it to me. **_Enjoy the read_**
 
