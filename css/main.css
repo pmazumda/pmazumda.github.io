@@ -33,7 +33,7 @@ a:focus {
   color: {{ site.hover-col }};
 }
 blockquote {
-  color: #808080;
+  color: #783f04;
   font-style: italic;
 }
 blockquote p:first-child {
@@ -271,10 +271,10 @@ img {
 /* --- Footer --- */
 
 footer {
-  padding: 30px 0;
+  padding: 20px 0;
   border-top: 1px #ffffff solid;
-  margin-top: 50px;
-  font-size: 14px;
+  margin-top: 20px;
+  font-size: 13px;
   background-color: {{ site.footer-col }};
   {% if site.footer-img %}
   background-image: url({{ site.footer-img | relative_url }});
@@ -309,17 +309,17 @@ footer .theme-by {
     padding: 50px 0;
   }
   footer .footer-links {
-    font-size: 18px;
+    font-size: 15px;
   }
   footer .copyright {
-    font-size: 16px;
+    font-size: 12px;
   }
 }
 
 /* --- Post preview --- */
 
 .post-preview {
-  padding: 20px 0;
+  padding: 18px 0;
   border-bottom: 1px solid #eee;
 }
 
