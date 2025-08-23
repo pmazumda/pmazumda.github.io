@@ -13,7 +13,7 @@ description: Yet another blog all about devops and middleware.
 url: "https://devopsclub.co.in"
 
 # baseurl should be an empty string
-baseurl: "https://devopsclub.co.in"
+baseurl: ""
 
 # --- Navigation bar options --- #
 
