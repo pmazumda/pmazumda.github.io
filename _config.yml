@@ -3,7 +3,19 @@
 title: Pinak Mazumdar
 author: Pinak Mazumdar
 description: Yet another blog all about devops and middleware.
+<<<<<<< HEAD
 url: "https://pinakmazumdar.nirmaan.dev"
+=======
+
+# --- Local development options ---
+# If your website is hosted locally rather than on GitHub, then you need to uncomment the next two parameters to set the url and baseurl
+# *** If you're not sure what this mean, then leave this section as it is. Only modify the url and baseurl if you know what you're doing!***
+
+# url is the the website domain URL without a trailing slash
+url: "blog.nirmaan.dev"
+
+# baseurl should be an empty string
+>>>>>>> f4758f4 (update blog)
 baseurl: ""
 
 ###############################################
@@ -14,10 +26,16 @@ navbar-links:
  TECH:
    - POSTS: "blog"
    - TAGS: "tags"
+<<<<<<< HEAD
  FUN:
   - DIY : "diy"
   - TRAVEL: "travel"
 
+=======
+ ABOUT:
+   - THIS SITE: "abouttheblog"
+   
+>>>>>>> f4758f4 (update blog)
 # --- Google custom search config --- #
 nav-search: "search"
 
@@ -130,7 +148,7 @@ share-links-active:
   twitter: true
 # How to display the link to your website in the footer
 # Remove this if you don't want a link in the footer
-#url-pretty: "devopsclub.co.in"  
+#url-pretty: "blog.nirmaan.dev"  
 
 
 # Add the website title to the title of every page

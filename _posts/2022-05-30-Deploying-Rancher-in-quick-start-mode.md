@@ -17,7 +17,7 @@ tags:
 readtime: true
 share-title: How to deploy a rancher instance for testing.
 subtitle: Deploying Rancher for Demo and Testing
-url: https://devopsclub.co.in/2022-05-30-Deploying-Rancher-in-quick-start-mode/ 
+url: https://blog.nirmaan.dev/2022-05-30-Deploying-Rancher-in-quick-start-mode/ 
 ---
 
 By now I think most of us would have heard already heard about  Kubernetes and in some manner have worked with it. I am not going to  write anything about Kubernetes here but a software which I see a lot of organizations have started  using and in some ways it compliments a lot to the k8s stack we have been using in our teams.

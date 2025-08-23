@@ -8,4 +8,4 @@ Disallow /_data/*
 Disallow /content/*
 Disallow /css/*
 
-Sitemap: https://devopsclub.co.in/sitemap.xml
+Sitemap: https://blog.nirmaan.dev/sitemap.xml
