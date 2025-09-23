@@ -1,0 +1,11 @@
+User-agent: *
+Disallow /materialdesign/*
+Disallow /js/*
+Disallow /img/*
+Disallow /_layouts/*
+Disallow /_includes/*
+Disallow /_data/*
+Disallow /content/*
+Disallow /css/*
+
+Sitemap: https://devopsclub.co.in/sitemap.xml

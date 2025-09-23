@@ -10,21 +10,26 @@
 ############################
 
 # Name of website
-title: My website
-
+title: DevOps Club  
 # Your name to show in the footer
-author: Some Person
+description: Yet another blog all about devops and middleware.
+url: "https://devopsclub.co.in"
+baseurl: ""
 
 ###############################################
 # --- List of links in the navigation bar --- #
 ###############################################
 
 navbar-links:
-  About Me: "aboutme"
-  Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
-    - Learn markdown: "https://www.markdowntutorial.com/"
-  Author's home: "https://deanattali.com"
+ BLOG:
+   - POSTS: "blog"
+   - TAGS: "tags"
+ ABOUT:
+   - ME: "aboutme"
+   - THIS SITE: "abouttheblog"
+   
+# --- Google custom search config --- #
+nav-search: "search"
 
 ################
 # --- Logo --- #
@@ -32,7 +37,7 @@ navbar-links:
 
 # Image to show in the navigation bar - works best with a square image
 # Remove this parameter if you don't want an image in the navbar
-avatar: "/assets/img/avatar-icon.png"
+#avatar: "/img/pinakmazumdar.jpg"
 
 # By default, the image is cut into a circle. You can disable this behaviour by setting 'round-avatar: false'
 round-avatar: true
@@ -42,34 +47,76 @@ round-avatar: true
 #title-img: /path/to/image
 
 
+navbar-col: "#F5F5F5"
+navbar-text-col: "#404040"
+navbar-children-col: "#F5F5F5"
+page-col: "#FFFFFF"
+link-col: "#008AFF"
+hover-col: "#0085A1"
+footer-col: "#F5F5F5"
+footer-text-col: "#777777"
+footer-link-col: "#404040"
+
+
+#navbar-col: "#EAEAEA"
+#navbar-col: "#C0C0C0"
+#navbar-text-col: "#000000"
+navbar-border-col: "#FFFF00"
+#page-col: "#C0C0C0"
+text-col: "#000000"
+#link-col: "#00008B"
+#hover-col: "#00008B"
+#footer-col: "#ffffff"
+#footer-text-col: "#000000"
+#footer-link-col: "#00008B"
+footer-hover-col: "#CAC0B3"
+#navbar-children-col: "#C0C0C0"
+
+#navbar-col: "#F5F5F5"
+#navbar-text-col: "#404040"
+#navbar-children-col: "#F5F5F5"
+#page-col: "#FFFFFF"
+#page-col: "#D3D3D3"
+#text-col: "#404040"                   
+#link-col: "#008AFF"
+#hover-col: "#D3D3D3"
+#footer-col: "#F5F5F5"
+#footer-text-col: "#777777"
+#footer-link-col: "#404040"
+#footer-hover-col: "#0085A1"                           
+
+#navbar-img: "/img/headernfooter.jpg"
+#footer-img: "/img/headernfooter.jpg"
+
+#page-img: "/img/headernfooter.jpg"
+
 #####################################
 # --- Footer social media links --- #
-#####################################
+# Change all these values or delete the ones you Updatdon't want.
+  name: Pinak Mazumdar
 
 # Select the social network links that you want to show in the footer.
 # You can change the order that they show up on the page by changing the order here.
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
-  email: "someone@example.com"
-  rss: true  # remove this line if you don't want to show an RSS link at the bottom
-  facebook: deanattali
-  github: daattali
-  twitter: daattali
+  email: "mazumdar.pinak@gmail.com" 
+  linkedin: pinakmazumdar
+  instagram: pinak_capri
+  facebook: peenakm
   patreon: DeanAttali
   youtube: "@daattali"
   whatsapp: 15551212
 #  medium: yourname
 #  reddit: yourname or r/yoursubreddit
-#  linkedin: daattali
 #  xing: yourname
-#  stackoverflow: "3943160/daattali"
-#  snapchat: deanat78
-#  instagram: deanat78
+#  snapchat:
+
+#  youtube: user/
 #  spotify: yourname
-#  telephone: +14159998888
-#  steam: deanat78
-#  twitch: yourname
-#  yelp: yourname
+#  telephone:
+#  steam:
+#  twitch:
+#  yelp:
 #  telegram: yourname
 #  calendly: yourname
 #  mastodon: instance.url/@username
@@ -94,15 +141,14 @@ rss-description: This website is a virtual proof that I'm awesome
 
 # Select which social network share links to show in posts
 share-links-active:
-  twitter: true
   facebook: true
   linkedin: true
-  vk: false
-  reddit: false
-
+  instagram: true
+  twitter: false
 # How to display the link to your website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "MyWebsite.com"
+#url-pretty: "devopsclub.co.in"  
+
 
 # Add the website title to the title of every page
 title-on-all-pages: true
@@ -197,10 +243,9 @@ footer-hover-col: "#0085A1"
 ####################
 
 # To use Disqus comments, sign up to https://disqus.com and fill in your Disqus shortname (NOT the userid)
-#disqus: ""
-
+#disqus: "middlewarebytes"
 # To use Facebook Comments, create a Facebook app and fill in the Facebook App ID
-#fb_comment_id: ""
+fb_comment_id: "236522994258106"
 
 # To use CommentBox, sign up for a Project ID on https://commentbox.io
 #commentbox: "" # Project ID, e.g. "5694267682979840-proj"
@@ -252,20 +297,25 @@ footer-hover-col: "#0085A1"
 # Ruby Date Format to show dates of posts
 date_format: "%B %-d, %Y"
 
-# Facebook App ID
-#fb_app_id: ""
-
 #################################################################################
 # --- You don't need to touch anything below here (but you can if you want) --- #
 #################################################################################
+                                                           # Whether or not to show an excerpt for every blog post in the feed page
+feed_show_excerpt: true
+
+# Whether or not to show a list of tags below each post preview in the feed page
+feed_show_tags: true
+
+# Add a search button to the navbar
+post_search: true    
 
 # Output options (more information on Jekyll's site)
-timezone: "America/Toronto"
+timezone: "Asia/Kolkata"
 markdown: kramdown
 highlighter: rouge
 permalink: /:year-:month-:day-:title/
 paginate: 5
-
+paginate_path: "/blog/page:num/"
 kramdown:
   input: GFM
 
@@ -295,11 +345,65 @@ exclude:
   - README.md
   - screenshot.png
   - docs/
-
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
 
-# Beautiful Jekyll / Dean Attali
-# 2fc73a3a967e97599c9763d05e564189
 
+theme: jekyll-theme-slate
+
+
+##Google AdSense##
+
+
+# prose.io config
+prose:
+  rooturl: '_posts'
+  media: 'img'
+  ignore:
+    - 404.html
+    - LICENSE
+    - feed.xml
+    - _config.yml
+    - /_layouts
+    - /_includes
+    - /css
+    - /img
+    - /js
+  metadata:
+    _posts:
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "post"
+      - name: "title"
+        field:
+          element: "text"
+          label: "Post title"
+          placeholder: "Title"
+          alterable: true
+      - name: "subtitle"
+        field:
+          element: "textarea"
+          label: "Subtitle"
+          placeholder: "A description of your post."
+          alterable: true
+      - name: "date"
+        field:
+          element: "text"
+          label: "Date"
+          help: "Enter date of post."
+          placeholder: "yyyy-mm-dd"
+          alterable: true
+      - name: "image"
+        field:
+          element: "text"
+          label: "Image"
+          help: "Add a thumbnail image to your post."
+          placeholder: "Thumbnail"
+          alterable: true
+      - name: "published"
+        field:
+          element: "checkbox"
+          label: "Publish"
+          help: "Check to publish post, uncheck to hide."

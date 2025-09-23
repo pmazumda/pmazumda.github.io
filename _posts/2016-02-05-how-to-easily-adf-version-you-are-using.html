@@ -1,0 +1,19 @@
+---
+layout: post
+title: How to find the ADF Version
+date: '2016-02-05T18:07:00.007+05:30'
+author: Middlewarebytes
+sitemap:
+  lastmod: 2022-05-31
+  priority: 0.7
+  changefreq: 'monthly'
+  exclude: 'no'
+tags:
+- OPatch
+- Fusion Middleware
+- ADF Version
+modified_time: '2016-06-13T22:09:35.641+05:30'
+subtitle: How to find the ADF Version
+---
+
+<div dir="ltr" style="text-align: left;" trbidi="on"><h2 style="text-align: left;">How To Easily &nbsp;find the ADF version you are using with Fusion&nbsp; Middleware Components.</h2><div><br /></div><div><br /></div><div>Using the OPatch utility :-</div><div>--------------------------------</div><div><br /></div><div>You can find the &nbsp;information using ADF, but it is &nbsp;a bit complicated since the version changes when patched.</div><div><br /></div><div>system@oracevm]$ ./opatch lsinventory -detail&nbsp;</div><div><br /></div><div>or&nbsp;</div><div><br /></div><div>system@oraclevm]$./opatch lsinventory -detail | grep JDEVADF</div><div>JDEVADF &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;11.1.1.7.0</div><div><br /></div><div><br /></div><div>However, when you verify &nbsp;the output for JDEVADF, you must see the ID of the patches that have updated the ADF versions, for example from 11.1.1.7 to 11.1.2.4</div><div><br /></div><div><br /></div><div>Another method to determine the version of the ADF is to open the adf &nbsp;jar extracting the information, as an example I have listed&nbsp; the version numbers for 12.1.2, 11.1.1.7, 11.1.2.4 rel.</div><div><br /><span style="color: #444444;"><span style="font-size: small;"><span style="font-family: &quot;times&quot; , &quot;times new roman&quot; , serif;"><span style="font-family: &quot;courier new&quot; , &quot;courier&quot; , monospace;">For FMW 12.1.2<br /><br />$ cd /u01/app/oracle/product/adf12c/oracle_common<br />$ unzip -p modules/oracle.adf.share_12.1.2/adf-share-support.jar |&nbsp; <br />tr '[\000-\011\013-\037\177-\377]' '.' | grep "JDEVADF"<br /><br />Oracle-Label: JDEVADF_12.1.2.0.0_GENERIC_130608.2330.6668.<br /><br />Oracle-Label-JDEVADF: JDEVADF_12.1.2.0.0_GENERIC_130608.2330.6668.<br /><br /><br />For FMW 11.1.1.7<br /><br />$ cd /u01/app/oracle/product/osb111/oracle_common<br />$ unzip -p modules/oracle.adf.share_11.1.1/adf-share-support.jar | <br />tr '[\000-\011\013-\037\177-\377]' '.' | grep JDEVADF<br /><br />Oracle-Label: JDEVADF_11.1.1.7.0_GENERIC_130226.1400.6493.<br /><br /><br />For&nbsp; ADF 11.1.2.4<br /><br />$ cd /u01/app/oracle/product/adf/oracle_common<br />$ unzip -p modules/oracle.adf.share_11.1.1/adf-share-support.jar | <br />tr '[\000-\011\013-\037\177-\377]' '.' | grep JDEVADF<br /><br />Oracle-Label: JDEVADF_11.1.2.4.0_GENERIC_130421.1600.6436.1.<br /><br /><br /><br /><br /><br /></span></span></span></span></div></div>
