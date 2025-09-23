@@ -1,5 +1,5 @@
 <footer>
-  <div class="container beautiful-jekyll-footer">
+  <div class="container-md beautiful-jekyll-footer">
     <div class="row">
       <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
       {% include social-networks-links.html %}
@@ -9,15 +9,19 @@
             {% include {{ file }} %}
           {% endfor %}
         </div>
-		{% endif %}
+      {% endif %}
       <p class="copyright text-muted">
-      {{ site.author.name }}
-      &nbsp;&bull;&nbsp;
+      {% if site.author %}
+        {{ site.author }}
+        &nbsp;&bull;&nbsp;
+      {% endif %}
       {{ site.time | date: '%Y' }}
 
       {% if site.url-pretty %}
-      &nbsp;&bull;&nbsp;
-      <a href="{{ '' | absolute_url }}">{{ site.url-pretty }}</a>
+        &nbsp;&bull;&nbsp;
+        <span class="author-site">
+          <a href="{% if site.url-canonical %}{{ site.url-canonical }}{% else %}{{ '/' | absolute_url }}{% endif %}">{{ site.url-pretty }}</a>
+        </span>
       {% endif %}
 
       {% if site.matomo %}
@@ -26,16 +30,17 @@
           <a href="http://{{- site.matomo.uri -}}/index.php?module=CoreAdminHome&action=optOut" target="_blank" class="text_muted">Do-not-Track</a>
         {% endif %}
       {% endif%}
+
+      {% if site.edit_page_button and site.github.repository_url %}
+        &nbsp;&bull;&nbsp;
+        <a title="Edit this page on GitHub" href="{{ site.github.repository_url }}/edit/{{ site.github.source.branch }}/{{ page.path }}" class="text_muted">Edit page</a>
+       {% endif%}
+
       </p>
-          <!-- Please don't remove this, keep my open source work credited :) -->
-    <p class="theme-by text-muted">
-      Powered by
+      {% unless site.remove-ads %}<p class="theme-by text-muted">
+        Powered by
         <a href="https://beautifuljekyll.com">Beautiful Jekyll</a>
-		</p>
-		<p>
-		<div id="wcb" class="carbonbadge"></div>
-        <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
-		</p>
+      </p>{% endunless %}
       </div>
     </div>
   </div>
