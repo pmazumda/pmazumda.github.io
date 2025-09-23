@@ -93,7 +93,7 @@ footer-hover-col: "#CAC0B3"
 #####################################
 # --- Footer social media links --- #
 # Change all these values or delete the ones you Updatdon't want.
-  name: Pinak Mazumdar
+# name: Pinak Mazumdar
 
 # Select the social network links that you want to show in the footer.
 # You can change the order that they show up on the page by changing the order here.
