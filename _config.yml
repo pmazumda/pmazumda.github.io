@@ -102,10 +102,8 @@ social-network-links:
   email: "mazumdar.pinak@gmail.com" 
   linkedin: pinakmazumdar
   instagram: pinak_capri
-  facebook: peenakm
-  patreon: DeanAttali
-  youtube: "@daattali"
-  whatsapp: 15551212
+  medium: @mazumdar.pinak
+
 #  medium: yourname
 #  reddit: yourname or r/yoursubreddit
 #  xing: yourname
@@ -141,10 +139,10 @@ rss-description: This website is a virtual proof that I'm awesome
 
 # Select which social network share links to show in posts
 share-links-active:
-  facebook: true
+  facebook: false
   linkedin: true
   instagram: true
-  twitter: false
+  twitter: true
 # How to display the link to your website in the footer
 # Remove this if you don't want a link in the footer
 #url-pretty: "devopsclub.co.in"  
@@ -349,12 +347,7 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
 
-
-    #theme: jekyll-theme-slate
-
-
-##Google AdSense##
-
+#theme: jekyll-theme-slate
 
 # prose.io config
 prose:
