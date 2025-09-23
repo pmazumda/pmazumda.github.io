@@ -11,7 +11,7 @@
 
 # Name of website
 title: DevOps Club  
-# Your name to show in the footer
+author: Pinak Mazumdar
 description: Yet another blog all about devops and middleware.
 url: "https://devopsclub.co.in"
 baseurl: ""
@@ -104,7 +104,7 @@ social-network-links:
   instagram: pinak_capri
   facebook: peenakm
   twitter: mazumdarpinak
-  medium: @mazumdarpinak
+  medium: "@mazumdarpinak"
 #  reddit: yourname or r/yoursubreddit
 #  xing: yourname
 #  snapchat:
@@ -155,10 +155,10 @@ title-on-all-pages: true
 excerpt_length: 50
 
 # Whether or not to show an excerpt for every blog post in the feed page
-feed_show_excerpt: true
+feed_show_excerpt: false
 
 # Whether or not to show a list of tags below each post preview in the feed page
-feed_show_tags: true
+feed_show_tags: false
 
 # Add a search button to the navbar
 post_search: true
@@ -295,16 +295,6 @@ fb_comment_id: "236522994258106"
 # Ruby Date Format to show dates of posts
 date_format: "%B %-d, %Y"
 
-#################################################################################
-# --- You don't need to touch anything below here (but you can if you want) --- #
-#################################################################################
-                                                           # Whether or not to show an excerpt for every blog post in the feed page
-feed_show_excerpt: true
-
-# Whether or not to show a list of tags below each post preview in the feed page
-feed_show_tags: true
-
-# Add a search button to the navbar
 post_search: true    
 
 # Output options (more information on Jekyll's site)
@@ -312,27 +302,32 @@ timezone: "Asia/Kolkata"
 markdown: kramdown
 highlighter: rouge
 permalink: /:year-:month-:day-:title/
-paginate: 5
+paginate: 10
 paginate_path: "/blog/page:num/"
 kramdown:
   input: GFM
 
-# Default YAML values (more information on Jekyll's site)
+
+  # Default YAML values (more information on Jekyll's site)
 defaults:
   -
     scope:
       path: ""
       type: "posts"
     values:
+      carbonads: true
       layout: "post"
       comments: true  # add comments to all blog posts
       social-share: true # add social media sharing buttons to all blog posts
+      show-share: true
+      show-subscribe: true
+      after-content: [share-section.html, scroll-box.html]  
   -
     scope:
-      path: "" # any file that's not a post will be a "page" layout by default
+      path: "pages"
     values:
       layout: "page"
-
+      comments: true
 # Exclude these files from production site
 exclude:
   - CHANGELOG.md
@@ -346,7 +341,7 @@ exclude:
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
-
+  - jekyll-feed
 # prose.io config
 prose:
   rooturl: '_posts'
