@@ -2,7 +2,7 @@
 layout: default
 permalink: "search"
 title: "Search"
-css: "/css/customsearch.css"
+css: "/assets/css/customsearch.css"
 sitemap:
   lastmod: 2022-05-14
   priority: 0.7

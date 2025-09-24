@@ -2,7 +2,7 @@
 layout: post
 title: Deploying Rancher for Demo and Testing
 date: '2022-05-30T12:47:00.000+05:30'
-author: Middlewarebytes
+author: Pinak Mazumdar
 sitemap:
   lastmod: 2022-05-31
   priority: 0.7

@@ -2,7 +2,7 @@
 layout: post
 title: All Things Grafana
 date: '2023-01-01T18:47:00.000+05:30'
-author: Middlewarebytes
+author: Pinak Mazumdar
 sitemap:
   lastmod: 2023-01-07
   priority: 0.7

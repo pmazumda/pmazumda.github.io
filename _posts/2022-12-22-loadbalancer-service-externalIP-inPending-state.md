@@ -2,7 +2,7 @@
 layout: post
 title:  Troubleshooting Azure AKS Loadbalancer Service Creation
 date: '2022-12-22T18:47:00.000+05:30'
-author: Middlewarebytes
+author: Pinak Mazumdar
 sitemap:
   lastmod: 2022-12-30
   priority: 0.7

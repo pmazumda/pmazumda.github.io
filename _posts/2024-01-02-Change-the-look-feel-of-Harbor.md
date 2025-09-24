@@ -2,7 +2,7 @@
 layout: post
 title: How to Customize the Look and Feel of Harbor
 date: '2024-01-02T12:47:00.000+05:30'
-author: Middlewarebytes
+author: Pinak Mazumdar
 sitemap:
   lastmod: 2024-01-04
   priority: 0.7
@@ -32,25 +32,25 @@ So, the primary file where all the customization related configurations are stor
 In our case, I could see that this file is part of the Harbor portal container. I am using Harbor **v2.6.2** and the file is present under `usr/share/nginx/html`
 If you open the file, you'll see the default content is 
 
-    {
-      "headerBgColor": {
-        "darkMode": "",
-        "lightMode": ""
-      },
-      "loginBgImg": "",
-      "loginTitle": "",
-      "product": {
-        "name": "",
-        "logo": "",
-        "introduction": ""
-      }
-    }
-	
+```json
+{
+  "headerBgColor": {
+    "darkMode": "",
+    "lightMode": ""
+  },
+  "loginBgImg": "",
+  "loginTitle": "",
+  "product": {
+    "name": "",
+    "logo": "",
+    "introduction": ""
+  }
+}
+```
 	
 ### Step 1 
 
-
- Change the values of configuration if you want to override the default style to your own. Here are references:
+Change the values of configuration if you want to override the default style to your own. Here are references:
 
 -   **headerBgColor**: The background color of the page header, support either HEX or RGB value. e.g:  `#004a70`  and  `rgb(210,110,235)`.
     -   **darkMode**: The background color of the page header for the dark mode.
@@ -67,19 +67,18 @@ Once updated, create a folder called as **customize** and save it under the temp
 
 ### Step2
 
-
 Create a configmap named as harborcustom loading the datatype as setting.json  we created in Step 1.
 
-    kubectl create configmap  harborcustom --from-file=setting.json=customize/setting.json --namespace <NAMESPACE>
-
+```bash
+kubectl create configmap  harborcustom --from-file=setting.json=customize/setting.json --namespace <NAMESPACE>
+```
 
 ### Step3
-
 
 Mount the created configmap in Step2 as a volume inside the pod.
 Add relevant mount section inside the **deployment.yaml** file of the portal manifest.
 
-
+```yaml
     volumeMounts:
       - mountPath: /usr/share/nginx/html/setting.json
          name: custom
@@ -90,6 +89,7 @@ Add relevant mount section inside the **deployment.yaml** file of the portal man
       configMap:
          defaultMode: 420
          name: harborcustom       
+```
 
 Save the file and deploy Harbor using the helm chart. Use harbor install or upgrade commands with appropriate flags to perform the upgrade or install if doing from scratch. 
 
