@@ -1,11 +1,11 @@
 ---
 layout: page
-title: DevOps Club
+title: Nirmaan 
 show-avatar: true
-subtitle: Knowledge hub for DevOps,middleware,CI-CD,tricks, tips and much more...
+subtitle: A Knowledge hub for DevOps,middleware,CI-CD,tricks, tips and much more...
 bigimg: 'img/home-page-bg.jpg'
-use-site-title: true
-css: 'css/extend-home.css'
+share-img: /assets/img/
+share-title: "Nirmaan - A knowledge hub"
 ---
 
 <h1 class="text-center">Recent Posts</h1>
