@@ -2,7 +2,7 @@
 layout: post
 title: What is a HAProxy and how does it work ?
 date: '2020-10-26T20:47:00.000+05:30'
-author: Middlewarebytes
+author: Pinak Mazumdar
 sitemap:
   lastmod: 2022-05-31
   priority: 0.7
@@ -38,10 +38,10 @@ The source code of HAProxy which is covered under GPL v2 licence can be download
 
 #### Configuration
 
-The primary and the defaulfft configuration file for HAProxy is /etc/haproxy/haproxy.cfg, which is created automatically during installation. This file defines a standard setup without any load balancing, following is a template for the haproxy.cfg with default configurations. The 
+The primary and the default configuration file for HAProxy is /etc/haproxy/haproxy.cfg, which is created automatically during installation. This file defines a standard setup without any load balancing, following is a template for the haproxy.cfg with default configurations. The 
 
 
-    ```
+```bash
     global  
         log /dev/log    local0
         log /dev/log    local1 notice
@@ -100,7 +100,7 @@ The primary and the defaulfft configuration file for HAProxy is /etc/haproxy/hap
         stats uri /
         stats hide-version
         stats auth someuser:password
-        ```
+```
 	
 
 #### Explanation:

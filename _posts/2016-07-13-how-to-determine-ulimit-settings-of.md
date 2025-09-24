@@ -2,7 +2,7 @@
 layout: post 
 title: Determine ulimit settings on Linux. 
 date: '2016-07-13T15:31:00.002+05:30' 
-author: Middlewarebytes
+author: Pinak Mazumdar
 sitemap:
   lastmod: 2022-05-31
   priority: 0.7
@@ -10,7 +10,6 @@ sitemap:
   exclude: 'no'
 tags: 
 modified_time: '2016-07-13T15:32:56.554+05:30'
-blogger_orig_url: https://middlewarebytes.blogspot.com/2016/07/how-to-determine-ulimit-settings-of.html 
 subtitle: Determine ulimit settings on Linux.
 ---
 

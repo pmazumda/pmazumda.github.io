@@ -1,8 +1,8 @@
 ---
 layout: post
-title: De - clutter  your computer and sort  files smartly using Python
+title: De-clutter your computer and sort  files smartly using Python
 date: '2020-01-13T15:08:00.000+05:30'
-author: Middlewarebytes
+author: Pinak Mazumdar
 sitemap:
   lastmod: 2022-05-31
   priority: 0.7
@@ -26,7 +26,7 @@ This requires Python to run, so you need to install Python on your machine first
 
 For the time being, if you want to use this program, you can download Python from the official site [Here](https://www.python.org/downloads/).
 
-```
+```python
 ## Declutter Program
 ###############################################################################
 ##This program needs python to be installed on your computer in order to run ##          

@@ -2,7 +2,7 @@
 layout: post
 title: A Step-by-Step Guide to Installing Trivy Adapter Scanner on a Kubernetes Cluster
 date: '2023-08-11T10:47:00.000+05:30'
-author: Middlewarebytes
+author: Pinak Mazumdar
 sitemap:
   lastmod: 2023-09-01
   priority: 0.7

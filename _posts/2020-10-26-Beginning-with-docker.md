@@ -2,7 +2,7 @@
 layout: post
 title: Beginning with Docker
 date: '2020-12-07T09:44:00.000+05:30'
-author: Middlewarebytes
+author: Pinak Mazumdar
 sitemap:
   lastmod: 2022-05-31
   priority: 0.7
@@ -138,14 +138,16 @@ The MergedDir represents the result of the UpperDir and LowerDir that is used by
 
 Docker Volumes
 It is possible to add a persistent store to containers to keep data longer than the container exists or to share the volume with the host or with other containers. A container can be started with a volume by using the -v option:
-```
+```bash
 $ docker run --name nginx_container -v /var/log nginx
 ```
 We can get information about the connected volume location by:
-```
+```bash
 $ docker inspect nginx_container
 ```
-...
+**Output**
+
+```bash
 "Mounts": [
             {
                 "Type": "volume",
@@ -158,9 +160,11 @@ $ docker inspect nginx_container
                 "Propagation": ""
             }
         ],
-...
-The referenced directory contains files from the location /var/log of the NGINX container.
 ```
+
+The referenced directory contains files from the location `/var/log` of the NGINX container.
+
+```bash
 $ ls -lah /var/lib/docker/volumes/1e4...d9c/_data
 
 total 88
@@ -176,16 +180,20 @@ drwxr-xr-x    2 root     root        4.0K Feb  3 21:02 nginx
 ```
 
 
-Cleaning up  space used by Docker
+**Cleaning up  space used by Docker**
 
 Most of the times the storage used by the docker can fill up quite quickly, we need to investigate it clean it up. It is recommended to use the Docker command to clean up unused containers, images. Container, networks, images, and the build cache can be cleaned up by executing:
-```
+
+```bash
 $ docker system prune -a
 ```
+
 Additionally, you can also remove unused volumes by executing:
-```
+
+```bash
 $ docker volumes prune
 ```
+
 ## Summary 
 
 Docker is an important part of many people’s environments and tooling. Sometimes, Docker feels a bit like magic by solving issues in a very smart way without telling the user how things are done behind the scenes. Still, Docker is a regular tool that stores its heavy parts in locations that can be opened and changed.

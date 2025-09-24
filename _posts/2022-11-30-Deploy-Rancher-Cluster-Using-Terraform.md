@@ -2,7 +2,7 @@
 layout: post
 title: Bootstrapping a Rancher Kubernetes Engine Cluster 
 date: '2022-11-30T18:47:00.000+05:30'
-author: Middlewarebytes
+author: Pinak Mazumdar
 sitemap:
   lastmod: 2022-05-27
   priority: 0.7
