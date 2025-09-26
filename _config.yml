@@ -3,7 +3,7 @@
 title: Pinak Mazumdar
 author: Pinak Mazumdar
 description: Yet another blog all about devops and middleware.
-url: "https://blog.nirmaan.dev"
+url: "https://pinakmazumdar.nirmaan.dev"
 baseurl: ""
 
 ###############################################
@@ -16,7 +16,7 @@ navbar-links:
    - TAGS: "tags"
  FUN:
   - DIY : "diy" 
-  - TRAVEL: "globetrotter"
+  - TRAVEL: "travel"
 
 # --- Google custom search config --- #
 nav-search: "search"
@@ -42,30 +42,33 @@ round-avatar: true
 
 # Personalize the colours in your website. Colour values can be any valid CSS colour
 
-#page-col: "#FFFFFF"
-#text-col: "#404040"
-#link-col: "#008AFF"
-#hover-col: "#0085A1"
-#navbar-col: "#EAEAEA"
-#navbar-text-col: "#404040"
-#navbar-border-col: "#DDDDDD"
-#footer-col: "#EAEAEA"
-#footer-text-col: "#777777"
-#footer-link-col: "#404040"
-#footer-hover-col: "#0085A1"
-
-navbar-col: "#F5F5F5"
+navbar-col: "#FFECA1"
 navbar-text-col: "#404040"
 navbar-children-col: "#F5F5F5"
-footer-col: "#F5F5F5"
+footer-col: "#FFECA1"
 footer-text-col: "#545454"
 footer-link-col: "#F8C146"
 page-col: "#FFFFFF"
 text-col: "#545454"
-link-col: "#F8C146"
+link-col: "#CC6CE7"
 hover-col: "#F5A941"
 navbar-border-col: "#FFFF00"
 footer-hover-col: "#CAC0B3"
+
+
+
+#navbar-col: "#F5F5F5"
+#navbar-text-col: "#404040"
+#navbar-children-col: "#F5F5F5"
+#footer-col: "#F5F5F5"
+#footer-text-col: "#545454"
+#footer-link-col: "#F8C146"
+#page-col: "#FFFFFF"
+#text-col: "#545454"
+#link-col: "#F8C146"
+#hover-col: "#F5A941"
+#navbar-border-col: "#FFFF00"
+#footer-hover-col: "#CAC0B3"
 
 
 #navbar-img: "/img/headernfooter.jpg"
@@ -85,8 +88,8 @@ social-network-links:
   email: "mazumdar.pinak@gmail.com" 
   linkedin: pinakmazumdar
   instagram: pinak_capri
-  facebook: peenakm
-  twitter: mazumdarpinak
+#  facebook: peenakm
+#  twitter: mazumdarpinak
   medium: "@mazumdarpinak"
 #  reddit: yourname or r/yoursubreddit
 #  xing: yourname
