@@ -42,18 +42,18 @@ round-avatar: true
 
 # Personalize the colours in your website. Colour values can be any valid CSS colour
 
-navbar-col: "#FFECA1"
+navbar-col: "#4a5568"
 navbar-text-col: "#404040"
 navbar-children-col: "#F5F5F5"
-footer-col: "#FFECA1"
+footer-col: "#4a5568"
 footer-text-col: "#545454"
 footer-link-col: "#F8C146"
 page-col: "#FFFFFF"
 text-col: "#545454"
 link-col: "#CC6CE7"
-hover-col: "#F5A941"
-navbar-border-col: "#FFFF00"
-footer-hover-col: "#CAC0B3"
+hover-col: "#667eea"
+navbar-border-col: "#4a5568"
+footer-hover-col: "#667eea"
 
 
 
@@ -284,13 +284,13 @@ defaults:
       path: ""
       type: "posts"
     values:
-      carbonads: true
+      carbonads: false
       layout: "post"
       comments: true  # add comments to all blog posts
       social-share: true # add social media sharing buttons to all blog posts
       show-share: true
-      show-subscribe: true
-      after-content: [share-section.html, scroll-box.html]  
+      show-subscribe: false
+      after-content: [share-section.html]  
   -
     scope:
       path: "pages"
