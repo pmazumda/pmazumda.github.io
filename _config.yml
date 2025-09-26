@@ -15,7 +15,7 @@ navbar-links:
    - POSTS: "blog"
    - TAGS: "tags"
  FUN:
-  - DIY : "diy" 
+  - DIY : "diy"
   - TRAVEL: "travel"
 
 # --- Google custom search config --- #
@@ -69,7 +69,6 @@ footer-hover-col: "#CAC0B3"
 #hover-col: "#F5A941"
 #navbar-border-col: "#FFFF00"
 #footer-hover-col: "#CAC0B3"
-
 
 #navbar-img: "/img/headernfooter.jpg"
 #footer-img: "/img/headernfooter.jpg"
