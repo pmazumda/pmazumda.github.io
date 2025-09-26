@@ -42,22 +42,22 @@ round-avatar: true
 
 # Personalize the colours in your website. Colour values can be any valid CSS colour
 
+
 navbar-col: "#4a5568"
 navbar-text-col: "#404040"
 navbar-children-col: "#F5F5F5"
 footer-col: "#4a5568"
+
 footer-text-col: "#545454"
 footer-link-col: "#F8C146"
 page-col: "#FFFFFF"
 text-col: "#545454"
 link-col: "#CC6CE7"
+
 hover-col: "#667eea"
 navbar-border-col: "#4a5568"
 footer-hover-col: "#667eea"
 
-
-
-#navbar-col: "#F5F5F5"
 #navbar-text-col: "#404040"
 #navbar-children-col: "#F5F5F5"
 #footer-col: "#F5F5F5"
