@@ -4,16 +4,6 @@ title: Pinak Mazumdar
 author: Pinak Mazumdar
 description: Yet another blog all about devops and middleware.
 url: "https://pinakmazumdar.nirmaan.dev"
-
-
-# --- Local development options ---
-# If your website is hosted locally rather than on GitHub, then you need to uncomment the next two parameters to set the url and baseurl
-# *** If you're not sure what this mean, then leave this section as it is. Only modify the url and baseurl if you know what you're doing!***
-
-# url is the the website domain URL without a trailing slash
-url: "blog.nirmaan.dev"
-
-# baseurl should be an empty string
 baseurl: ""
 
 ###############################################
@@ -58,8 +48,8 @@ navbar-text-col: "#FFFFFF"
 navbar-children-col: "#e1b382"
 footer-col: "#e1b382"
 
-footer-text-col: "#FFFFFF"
-footer-link-col: "#F8C146"
+footer-text-col: "2d545e"
+footer-link-col: "#ff5e6c"
 page-col: "#2d545e"
 text-col: "#FFFFFF"
 link-col: "#ff5e6c"
