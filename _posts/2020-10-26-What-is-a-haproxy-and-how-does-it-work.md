@@ -26,7 +26,7 @@ HAProxy (High Availability Proxy) is a TCP/HTTP load balancer and proxy server t
 
 Its mode of operation makes its integration into existing architectures very easy and riskless, while still offering the possibility not to expose fragile web servers to the net, such as below : 
 
-![HAProxy](/img/postimages/haproxy-pmode.png?raw=true "HAProxy")
+![HAProxy](/assets/img/postimages/haproxy-pmode.png?raw=true "HAProxy")
 
 ### Installation and Configuration
 
@@ -128,12 +128,12 @@ For a list of all the available fields which can be used to monitor the statisti
 
 The given template is when HAproxy is acting as a HTTP proxy, i,e at the layer 7 ( application layer). Using the layer 7 allows the load balancer to forward requests to different backend servers based on the content of the user’s request, ACL's and various conditions. This mode of load balancing allows you to run multiple web application servers under the same domain and port. 
 
-![Loadbalancing at Layer 7](/img/postimages/l7-loadbalancer.png?raw=true "Loadbalancing at Layer 7")
+![Loadbalancing at Layer 7](/assets/img/postimages/l7-loadbalancer.png)
 
 
 Load  balancing at layer 4 (transport layer) is the simplest way to load balance network traffic to multiple servers. Load balancing this way will forward user traffic based on IP range and port (i.e. if a request comes in for http://abcd.com/context, the traffic will be forwarded to the backend that handles all the requests for abcd.com on port 80). HAProxy can also be used as a layer 4 load balancer. 
 
-![Loadbalancing at Layer 4](/img/postimages/l4-loadbalancer.png?raw=true "Loadbalancing at Layer 4")
+![Loadbalancing at Layer 4](/assets/img/postimages/l4-loadbalancer.png?raw=true "Loadbalancing at Layer 4")
 
 
 Below is a nice Youtube video on the difference between layer 4 and layer 7 loadbalancing and how each of them works. 
@@ -149,11 +149,11 @@ I have also written a sample application using node.js, which if you run listens
 ### Monitoring
 
 With the given template as above, any incoming requests to the HAProxy node at IP address 203.0.113.2 will be forwarded to an internally networked node with an IP address of either 192.168.10.3 or 192.168.10.4. These backend nodes will serve the HTTP requests. If at any time either of these nodes fails the health check, they will not be used to serve any requests until they pass the test.
-In order to view statistics and monitor the health of the nodes, navigate to the IP address or domain name of the frontend node in a web browser at the assigned port, e.g., http://203.0.113.2:32700. This will display statistics such as the number of times a request was forwarded to a particular node as well the number of current and previous sessions handled by the frontend node.
+In order to view statistics and monitor the health of the nodes, navigate to the IP address or domain name of the frontend node in a web browser at the assigned port, e.g., `http://203.0.113.2:32700`. This will display statistics such as the number of times a request was forwarded to a particular node as well the number of current and previous sessions handled by the frontend node.
 
 ### Security , Maintenance
 
-Vulnerabilities are very rarely encountered in haproxy, and its architecture significantly limits their impact and often allows easy workarounds.It is  generally suggested starting HAProxy as root because it can then jail itself in a chroot and drop all of its privileges before starting the instances.
+Vulnerabilities are very rarely encountered in haproxy, and its architecture significantly limits their impact and often allows easy workarounds. It is generally suggested starting HAProxy as root because it can then jail itself in a chroot and drop all of its privileges before starting the instances.
 
 ### Performance
 
